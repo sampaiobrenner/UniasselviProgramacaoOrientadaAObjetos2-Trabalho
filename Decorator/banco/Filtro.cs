@@ -1,28 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Decorator.banco
 {
     public abstract class Filtro
     {
-        public Filtro OutroFiltro { get; set; }
-
-        public abstract IList<Conta> Filtra(IList<Conta> contas);
-
         public List<Conta> ContasFiltradas = new List<Conta>();
 
-        
-    public Filtro (Filtro outroFiltro)
+        public Filtro(Filtro outroFiltro)
         {
             this.OutroFiltro = outroFiltro;
         }
+
         public Filtro()
         {
             this.OutroFiltro = null;
         }
+
+        public Filtro OutroFiltro { get; set; }
+
+        public abstract IList<Conta> Filtra(IList<Conta> contas);
 
         protected IList<Conta> Proximo(IList<Conta> contas)
         {

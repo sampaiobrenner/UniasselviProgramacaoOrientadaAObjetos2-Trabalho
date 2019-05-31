@@ -1,19 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Strategy
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Imposto()
         {
-            //Imposto();
+            Imposto Iss = new ISS();
+            Imposto Icms = new ICMS();
+            Imposto Iccc = new ICCC();
 
-            //Investimento();
+            Orcamento orcamento = new Orcamento(4000);
+            CalculadorDeImposto Calculador = new CalculadorDeImposto();
 
+            Calculador.RealizaCalculo(orcamento, Iss);
+            Calculador.RealizaCalculo(orcamento, Icms);
+            Calculador.RealizaCalculo(orcamento, Iccc);
+
+            Console.ReadKey();
         }
 
         private static void Investimento()
@@ -31,20 +35,11 @@ namespace Strategy
             Console.ReadKey();
         }
 
-        private static void Imposto()
+        private static void Main(string[] args)
         {
-            Imposto Iss = new ISS();
-            Imposto Icms = new ICMS();
-            Imposto Iccc = new ICCC();
+            //Imposto();
 
-            Orcamento orcamento = new Orcamento(4000);
-            CalculadorDeImposto Calculador = new CalculadorDeImposto();
-
-            Calculador.RealizaCalculo(orcamento, Iss);
-            Calculador.RealizaCalculo(orcamento, Icms);
-            Calculador.RealizaCalculo(orcamento, Iccc);
-
-            Console.ReadKey();
+            //Investimento();
         }
     }
 }

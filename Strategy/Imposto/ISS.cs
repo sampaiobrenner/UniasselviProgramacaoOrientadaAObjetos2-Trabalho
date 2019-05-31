@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Strategy
+﻿namespace Strategy
 {
-    public class ISS:Imposto
+    public class ISS : Imposto
     {
         public double Calcula(Orcamento orcamento)
         {
             return orcamento.Valor * 0.06;
-            
         }
     }
 }

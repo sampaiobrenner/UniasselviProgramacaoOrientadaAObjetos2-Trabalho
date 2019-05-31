@@ -1,22 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Decorator.imposto
+﻿namespace Decorator.imposto
 {
     public class IHIT : TemplateCondicaoImposto
     {
         public IHIT(Imposto outroImposto) : base(outroImposto)
         {
         }
+
         public IHIT() : base()
         {
         }
+
         public override bool CondicaoMaiorImposto(Orcamento orcamento)
         {
             return Exitem2ItemComMesmoNome(orcamento);
+        }
+
+        public override double MaiorImposto(Orcamento orcamento)
+        {
+            return (orcamento.Valor * 0.13) + 100;
+        }
+
+        public override double MenorImposto(Orcamento orcamento)
+        {
+            return orcamento.Valor * (0.01 * orcamento.Itens.Count);
         }
 
         private bool Exitem2ItemComMesmoNome(Orcamento orcamento)
@@ -37,19 +43,8 @@ namespace Decorator.imposto
                     return true;
                 }
             }
-            
+
             return false;
-        }
-
-        public override double MaiorImposto(Orcamento orcamento)
-        {
-            return (orcamento.Valor * 0.13) + 100 ;
-        }
-
-        public override double MenorImposto(Orcamento orcamento)
-        {
-            return orcamento.Valor *( 0.01 * orcamento.Itens.Count);
-            
         }
     }
 }

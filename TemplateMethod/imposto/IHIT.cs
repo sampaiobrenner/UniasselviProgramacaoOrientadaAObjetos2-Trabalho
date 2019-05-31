@@ -1,16 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TemplateMethod
+﻿namespace TemplateMethod
 {
     public class IHIT : TemplateCondicaoImposto
     {
         public override bool CondicaoMaiorImposto(Orcamento orcamento)
         {
             return Exitem2ItemComMesmoNome(orcamento);
+        }
+
+        public override double MaiorImposto(Orcamento orcamento)
+        {
+            return (orcamento.Valor * 0.13) + 100;
+        }
+
+        public override double MenorImposto(Orcamento orcamento)
+        {
+            return orcamento.Valor * (0.01 * orcamento.Itens.Count);
         }
 
         private bool Exitem2ItemComMesmoNome(Orcamento orcamento)
@@ -31,19 +35,8 @@ namespace TemplateMethod
                     return true;
                 }
             }
-            
+
             return false;
-        }
-
-        public override double MaiorImposto(Orcamento orcamento)
-        {
-            return (orcamento.Valor * 0.13) + 100 ;
-        }
-
-        public override double MenorImposto(Orcamento orcamento)
-        {
-            return orcamento.Valor *( 0.01 * orcamento.Itens.Count);
-            
         }
     }
 }

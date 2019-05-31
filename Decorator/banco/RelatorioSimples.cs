@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Decorator.banco
 {
@@ -12,7 +9,6 @@ namespace Decorator.banco
         {
             Console.WriteLine("Banco XYZ");
             Console.WriteLine("----------------------------------");
-
         }
 
         public override void Corpo(IList<Conta> contas)

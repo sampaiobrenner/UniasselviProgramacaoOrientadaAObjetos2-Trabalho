@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Observer.ObserverNotaFiscal
+﻿namespace Observer.ObserverNotaFiscal
 {
     public class ItemDaNotaBuilder
     {
         public string Nome { get; private set; }
         public double Valor { get; private set; }
-        
 
         public ItemDaNotaBuilder ComNome(string nome)
         {
@@ -26,7 +19,7 @@ namespace Observer.ObserverNotaFiscal
 
         public ItemDaNota Constroi()
         {
-            return new ItemDaNota(Nome,Valor);            
+            return new ItemDaNota(Nome, Valor);
         }
     }
 }

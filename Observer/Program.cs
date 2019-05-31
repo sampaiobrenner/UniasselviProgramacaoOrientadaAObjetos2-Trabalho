@@ -1,18 +1,16 @@
 ﻿using Observer.ObserverNotaFiscal;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Observer
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Observer();
         }
+
         private static void Observer()
         {
             ItemDaNotaBuilder itemBuilder = new ItemDaNotaBuilder();
@@ -43,10 +41,9 @@ namespace Observer
                 .Com(item2)
                 .Com(item3)
                 .ComObservacoes("uma observacao qualquer");
-                //.ComAcao(new EnviadorDeEmail())
-                //.ComAcao(new NotaFiscalDao())
-                //.ComAcao(new Multiplicador(2));
-                
+            //.ComAcao(new EnviadorDeEmail())
+            //.ComAcao(new NotaFiscalDao())
+            //.ComAcao(new Multiplicador(2));
 
             NotaFiscal nota = builder.Constroi();
 

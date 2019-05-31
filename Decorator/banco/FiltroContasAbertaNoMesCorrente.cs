@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Decorator.banco
 {
     public class FiltroContasAbertaNoMesCorrente : Filtro
     {
-        public FiltroContasAbertaNoMesCorrente(Filtro outroFiltro) : base(outroFiltro) { }
-        public FiltroContasAbertaNoMesCorrente() : base() { }
+        public FiltroContasAbertaNoMesCorrente(Filtro outroFiltro) : base(outroFiltro)
+        {
+        }
+
+        public FiltroContasAbertaNoMesCorrente() : base()
+        {
+        }
 
         public override IList<Conta> Filtra(IList<Conta> contas)
         {
@@ -25,7 +27,6 @@ namespace Decorator.banco
                 ContasFiltradas.Add(conta);
             }
             return ContasFiltradas;
-
         }
     }
 }

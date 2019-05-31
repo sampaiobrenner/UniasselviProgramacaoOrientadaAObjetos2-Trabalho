@@ -2,22 +2,11 @@
 using Decorator.imposto;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Decorator
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
-        {
-            //ImpostoComDecorator();
-
-            FiltroDeContas();
-
-        }
-
         private static void FiltroDeContas()
         {
             Conta conta1 = new Conta("Rodrigo", 3146, 123456789, 20, new DateTime(1980, 10, 12));
@@ -44,7 +33,6 @@ namespace Decorator
             orcamento.AdicionaItem(new Item("Caneta", 250));
             orcamento.AdicionaItem(new Item("Caneta", 250));
 
-
             Imposto Imposto = new ImpostoMuitoAlto();
             Imposto Imposto2 = new ISS();
             Imposto Imposto3 = new ImpostoMuitoAlto(new ISS());
@@ -53,9 +41,15 @@ namespace Decorator
             var retorno2 = Imposto2.Calcula(orcamento);
             var retorno3 = Imposto3.Calcula(orcamento);
 
-
             Console.WriteLine(retorno + " + " + retorno2 + " = " + retorno3);
             Console.ReadKey();
+        }
+
+        private static void Main(string[] args)
+        {
+            //ImpostoComDecorator();
+
+            FiltroDeContas();
         }
     }
 }

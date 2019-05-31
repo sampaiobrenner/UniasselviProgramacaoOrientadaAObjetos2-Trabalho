@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ChainOfResponsibility
+﻿namespace ChainOfResponsibility
 {
     public class CalculadorDeDescontos
     {
@@ -19,7 +13,6 @@ namespace ChainOfResponsibility
             d3.Proximo = d4;
 
             return d1.Calcula(orcamento);
-            
         }
     }
 }

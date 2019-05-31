@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Decorator.banco
 {
     public class FiltroSaldoMenorQue100 : Filtro
     {
-        public FiltroSaldoMenorQue100(Filtro outroFiltro) : base(outroFiltro) { }
-        public FiltroSaldoMenorQue100() : base() { }
+        public FiltroSaldoMenorQue100(Filtro outroFiltro) : base(outroFiltro)
+        {
+        }
+
+        public FiltroSaldoMenorQue100() : base()
+        {
+        }
 
         public override IList<Conta> Filtra(IList<Conta> contas)
         {
@@ -26,7 +27,5 @@ namespace Decorator.banco
             }
             return ContasFiltradas;
         }
-
-          
     }
 }

@@ -3,13 +3,8 @@ using System;
 
 namespace Builder
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
-        {
-            Builder();
-        }
-
         private static void Builder()
         {
             ItemDaNotaBuilder itemBuilder = new ItemDaNotaBuilder();
@@ -26,7 +21,6 @@ namespace Builder
                 .ComValor(200);
             var item3 = itemBuilder.Constroi();
 
-
             NotaFiscalBuilder builder = new NotaFiscalBuilder();
             builder
                 .ComRazaoSocial("Filomeno Advogados")
@@ -41,6 +35,11 @@ namespace Builder
             nota.Imprime();
 
             Console.ReadKey();
+        }
+
+        private static void Main(string[] args)
+        {
+            Builder();
         }
     }
 }

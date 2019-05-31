@@ -1,18 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TemplateMethod.Relatorio;
 
 namespace TemplateMethod
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Imposto()
+        {
+            Orcamento orcamento = new Orcamento(0);
+            orcamento.AdicionaItem(new Item("Caneta", 20));
+            orcamento.AdicionaItem(new Item("Lapis", 20));
+            orcamento.AdicionaItem(new Item("Boracha", 20));
+            orcamento.AdicionaItem(new Item("Liquid Paper", 20));
+            orcamento.AdicionaItem(new Item("Xbox", 420));
+
+            Imposto ICPP = new ICPP();
+            Imposto IKCV = new IKCV();
+            Imposto IHIT = new IHIT();
+
+            CalculadorDeImposto calculador = new CalculadorDeImposto();
+
+            calculador.RealizaCalculo(orcamento, IHIT);
+
+            orcamento.AdicionaItem(new Item("Caneta", 20));
+            calculador.RealizaCalculo(orcamento, IHIT);
+
+            Console.ReadKey();
+        }
+
+        private static void Main(string[] args)
         {
             // Imposto();
-
 
             IList<Conta> contas = new List<Conta>();
 
@@ -30,30 +49,6 @@ namespace TemplateMethod
             relatorio1.Imprime(contas);
             Console.WriteLine("---------------------------------------------");
             relatorio2.Imprime(contas);
-            Console.ReadKey();
-            
-        }
-
-        private static void Imposto()
-        {
-            Orcamento orcamento = new Orcamento(0);
-            orcamento.AdicionaItem(new Item("Caneta", 20));
-            orcamento.AdicionaItem(new Item("Lapis", 20));
-            orcamento.AdicionaItem(new Item("Boracha", 20));
-            orcamento.AdicionaItem(new Item("Liquid Paper", 20));
-            orcamento.AdicionaItem(new Item("Xbox", 420));
-
-            Imposto ICPP = new ICPP();
-            Imposto IKCV = new IKCV();
-            Imposto IHIT = new IHIT();
-
-            CalculadorDeImposto calculador = new CalculadorDeImposto();
-            
-            calculador.RealizaCalculo(orcamento, IHIT);
-
-            orcamento.AdicionaItem(new Item("Caneta", 20));
-            calculador.RealizaCalculo(orcamento, IHIT);
-
             Console.ReadKey();
         }
     }

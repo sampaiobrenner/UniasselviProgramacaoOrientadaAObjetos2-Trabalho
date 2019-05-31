@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace State
 {
@@ -10,7 +6,6 @@ namespace State
     {
         private bool descontoAplicado = false;
 
-        
         public void AplicaDescontoExtra(Orcamento orcamento)
         {
             if (!descontoAplicado)
@@ -22,7 +17,6 @@ namespace State
             {
                 throw new Exception("Desconto ja foi aplicado!");
             }
-            
         }
 
         public void Aprova(Orcamento orcamento)

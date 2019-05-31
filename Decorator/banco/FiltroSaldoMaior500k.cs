@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Decorator.banco
 {
     public class FiltroSaldoMaior500k : Filtro
     {
-        public FiltroSaldoMaior500k(Filtro outroFiltro) : base(outroFiltro) { }
-        public FiltroSaldoMaior500k() : base() { }
+        public FiltroSaldoMaior500k(Filtro outroFiltro) : base(outroFiltro)
+        {
+        }
+
+        public FiltroSaldoMaior500k() : base()
+        {
+        }
 
         public override IList<Conta> Filtra(IList<Conta> contas)
         {

@@ -1,22 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChainOfResponsibility
 {
     public class RespostaEmXml : IResposta
     {
-        public IResposta Proximo { get; set; }
         public RespostaEmXml(IResposta proximo)
         {
             this.Proximo = proximo;
         }
+
         public RespostaEmXml()
         {
             this.Proximo = null;
         }
+
+        public IResposta Proximo { get; set; }
 
         public void Responde(Requisicao requisicao, Conta conta)
         {
@@ -24,7 +22,7 @@ namespace ChainOfResponsibility
             {
                 Console.WriteLine("<conta>");
                 Console.WriteLine("   <titular>");
-                Console.WriteLine("      "+conta.Titular);
+                Console.WriteLine("      " + conta.Titular);
                 Console.WriteLine("   </titular>");
                 Console.WriteLine("   <saldo>");
                 Console.WriteLine("      " + conta.Saldo);

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Decorator.banco
 {
@@ -12,14 +8,13 @@ namespace Decorator.banco
 
         public abstract void Corpo(IList<Conta> contas);
 
-        public abstract void Rodape();
-
         public void Imprime(IList<Conta> contas)
         {
             Cabecalho();
             Corpo(contas);
             Rodape();
         }
-        
+
+        public abstract void Rodape();
     }
 }

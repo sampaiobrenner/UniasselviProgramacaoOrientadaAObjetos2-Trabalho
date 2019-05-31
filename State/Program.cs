@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace State
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // StateDeOrcamento();
 
             StateDeConta();
-
         }
 
         private static void StateDeConta()
@@ -45,7 +40,6 @@ namespace State
             Console.WriteLine(reforma.Valor);
 
             reforma.Finaliza();
-
 
             Console.ReadKey();
         }

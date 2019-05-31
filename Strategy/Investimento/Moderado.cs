@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Strategy
 {
-    class Moderado : Investimento
+    internal class Moderado : Investimento
     {
         public double calcula(Conta conta)
         {
@@ -15,7 +11,6 @@ namespace Strategy
             if (sorte)
             {
                 return (conta.Saldo * 0.025);
-
             }
             else
             {
@@ -23,6 +18,4 @@ namespace Strategy
             }
         }
     }
-    
-    
 }
