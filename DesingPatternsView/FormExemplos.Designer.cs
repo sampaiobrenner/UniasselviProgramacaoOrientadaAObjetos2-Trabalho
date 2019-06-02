@@ -30,11 +30,11 @@
         {
             this.btnStrategy = new System.Windows.Forms.Button();
             this.btnChain = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnTemplateMehod = new System.Windows.Forms.Button();
+            this.btnDecorator = new System.Windows.Forms.Button();
+            this.btnState = new System.Windows.Forms.Button();
+            this.btnBuilder = new System.Windows.Forms.Button();
+            this.btnObserver = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             // 
             this.btnStrategy.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStrategy.Location = new System.Drawing.Point(13, 49);
-            this.btnStrategy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStrategy.Margin = new System.Windows.Forms.Padding(2);
             this.btnStrategy.Name = "btnStrategy";
             this.btnStrategy.Size = new System.Drawing.Size(166, 50);
             this.btnStrategy.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             this.btnChain.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChain.Location = new System.Drawing.Point(184, 49);
-            this.btnChain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChain.Margin = new System.Windows.Forms.Padding(2);
             this.btnChain.Name = "btnChain";
             this.btnChain.Size = new System.Drawing.Size(166, 50);
             this.btnChain.TabIndex = 1;
@@ -62,60 +62,65 @@
             this.btnChain.UseVisualStyleBackColor = true;
             this.btnChain.Click += new System.EventHandler(this.BtnChain_Click);
             // 
-            // button1
+            // btnTemplateMehod
             // 
-            this.button1.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(13, 104);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 50);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Template Method";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTemplateMehod.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTemplateMehod.Location = new System.Drawing.Point(13, 104);
+            this.btnTemplateMehod.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTemplateMehod.Name = "btnTemplateMehod";
+            this.btnTemplateMehod.Size = new System.Drawing.Size(166, 50);
+            this.btnTemplateMehod.TabIndex = 2;
+            this.btnTemplateMehod.Text = "Template Method";
+            this.btnTemplateMehod.UseVisualStyleBackColor = true;
+            this.btnTemplateMehod.Click += new System.EventHandler(this.BtnTemplateMehod_Click);
             // 
-            // button2
+            // btnDecorator
             // 
-            this.button2.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(184, 104);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 50);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Decorator";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDecorator.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDecorator.Location = new System.Drawing.Point(184, 104);
+            this.btnDecorator.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDecorator.Name = "btnDecorator";
+            this.btnDecorator.Size = new System.Drawing.Size(166, 50);
+            this.btnDecorator.TabIndex = 3;
+            this.btnDecorator.Text = "Decorator";
+            this.btnDecorator.UseVisualStyleBackColor = true;
+            this.btnDecorator.Click += new System.EventHandler(this.BtnDecorator_Click);
             // 
-            // button3
+            // btnState
             // 
-            this.button3.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(13, 159);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(166, 50);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "State";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnState.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnState.Location = new System.Drawing.Point(13, 159);
+            this.btnState.Margin = new System.Windows.Forms.Padding(2);
+            this.btnState.Name = "btnState";
+            this.btnState.Size = new System.Drawing.Size(166, 50);
+            this.btnState.TabIndex = 4;
+            this.btnState.Text = "State";
+            this.btnState.UseVisualStyleBackColor = true;
+            this.btnState.Click += new System.EventHandler(this.BtnState_Click);
             // 
-            // button4
+            // btnBuilder
             // 
-            this.button4.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(184, 159);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(166, 50);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Builder";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnBuilder.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuilder.Location = new System.Drawing.Point(184, 159);
+            this.btnBuilder.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuilder.Name = "btnBuilder";
+            this.btnBuilder.Size = new System.Drawing.Size(166, 50);
+            this.btnBuilder.TabIndex = 5;
+            this.btnBuilder.Text = "Builder";
+            this.btnBuilder.UseVisualStyleBackColor = true;
+            this.btnBuilder.Click += new System.EventHandler(this.BtnBuilder_Click);
             // 
-            // button5
+            // btnObserver
             // 
-            this.button5.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(13, 214);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(166, 50);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Observer";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnObserver.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnObserver.Location = new System.Drawing.Point(13, 214);
+            this.btnObserver.Margin = new System.Windows.Forms.Padding(2);
+            this.btnObserver.Name = "btnObserver";
+            this.btnObserver.Size = new System.Drawing.Size(166, 50);
+            this.btnObserver.TabIndex = 6;
+            this.btnObserver.Text = "Observer";
+            this.btnObserver.UseVisualStyleBackColor = true;
+            this.btnObserver.Click += new System.EventHandler(this.BtnObserver_Click);
             // 
             // label1
             // 
@@ -134,14 +139,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 275);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnObserver);
+            this.Controls.Add(this.btnBuilder);
+            this.Controls.Add(this.btnState);
+            this.Controls.Add(this.btnDecorator);
+            this.Controls.Add(this.btnTemplateMehod);
             this.Controls.Add(this.btnChain);
             this.Controls.Add(this.btnStrategy);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormExemplos";
             this.ShowIcon = false;
@@ -156,11 +161,11 @@
 
         private System.Windows.Forms.Button btnStrategy;
         private System.Windows.Forms.Button btnChain;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnTemplateMehod;
+        private System.Windows.Forms.Button btnDecorator;
+        private System.Windows.Forms.Button btnState;
+        private System.Windows.Forms.Button btnBuilder;
+        private System.Windows.Forms.Button btnObserver;
         private System.Windows.Forms.Label label1;
     }
 }

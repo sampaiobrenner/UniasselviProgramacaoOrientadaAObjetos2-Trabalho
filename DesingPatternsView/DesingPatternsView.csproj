@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuilder.Designer.cs">
+      <DependentUpon>FormBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChainOfResponsibility.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormChainOfResponsibility.Designer.cs">
       <DependentUpon>FormChainOfResponsibility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDecoretor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDecoretor.Designer.cs">
+      <DependentUpon>FormDecoretor.cs</DependentUpon>
     </Compile>
     <Compile Include="FormExemplos.cs">
       <SubType>Form</SubType>
@@ -58,11 +70,35 @@
     <Compile Include="FormExemplos.Designer.cs">
       <DependentUpon>FormExemplos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModelo.Designer.cs">
+      <DependentUpon>FormModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormObserver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObserver.Designer.cs">
+      <DependentUpon>FormObserver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormState.Designer.cs">
+      <DependentUpon>FormState.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormStrategy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormStrategy.Designer.cs">
       <DependentUpon>FormStrategy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTemplateMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTemplateMethod.Designer.cs">
+      <DependentUpon>FormTemplateMethod.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormExemplos.resx">
       <DependentUpon>FormExemplos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModelo.resx">
+      <DependentUpon>FormModelo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStrategy.resx">
       <DependentUpon>FormStrategy.cs</DependentUpon>

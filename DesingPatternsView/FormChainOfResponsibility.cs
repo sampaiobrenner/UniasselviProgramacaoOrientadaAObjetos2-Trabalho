@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace DesingPatternsView
 {
-    public partial class FormChainOfResponsibility : Form
+    public partial class FormChainOfResponsibility : FormModelo
     {
         public FormChainOfResponsibility()
         {

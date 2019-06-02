@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace DesingPatternsView
 {
-    public partial class FormStrategy : Form
+    public partial class FormStrategy : FormModelo
     {
         public FormStrategy()
         {
