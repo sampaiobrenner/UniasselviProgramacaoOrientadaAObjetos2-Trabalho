@@ -34,7 +34,8 @@ namespace DesingPatternsView
 
         private void PrencherCampos()
         {
-            txtParticipantes.Text = @"Handler, ConcreteHandler, Cliente";
+            txtParticipantes.Text =
+                @"Handler, ConcreteHandler, Cliente";
 
             txtExemploPratico.Text =
                 @"Com o padrão Chain, evitamos a ocorrência de diversos condicionais aninhados, mantendo maior elegância e facilidade de manutenção " +
@@ -48,7 +49,8 @@ namespace DesingPatternsView
                 @"Devido à isso, é um padrão que utiliza a ideia de baixo acoplamento por permitir que outros objetos da cadeia tenham a oportunidade de " +
                 @"tratar uma solicitação";
 
-            txtCategoria.Text = @"Comportamental";
+            txtCategoria.Text =
+                @"Comportamental";
         }
     }
 }

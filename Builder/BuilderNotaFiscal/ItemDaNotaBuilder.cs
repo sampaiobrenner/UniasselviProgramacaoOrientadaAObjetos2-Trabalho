@@ -2,24 +2,24 @@
 {
     public class ItemDaNotaBuilder
     {
-        public string Nome { get; private set; }
-        public double Valor { get; private set; }
+        private string Nome { get; set; }
+        private double Valor { get; set; }
 
-        public ItemDaNotaBuilder ComNome(string nome)
+        public ItemDaNota Build()
+        {
+            return new ItemDaNota(Nome, Valor);
+        }
+
+        public ItemDaNotaBuilder WithNome(string nome)
         {
             Nome = nome;
             return this;
         }
 
-        public ItemDaNotaBuilder ComValor(double valor)
+        public ItemDaNotaBuilder WithValor(double valor)
         {
             Valor = valor;
             return this;
-        }
-
-        public ItemDaNota Constroi()
-        {
-            return new ItemDaNota(Nome, Valor);
         }
     }
 }

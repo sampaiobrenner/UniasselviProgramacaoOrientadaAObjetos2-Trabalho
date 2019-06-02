@@ -102,6 +102,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBuilder.resx">
+      <DependentUpon>FormBuilder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChainOfResponsibility.resx">
       <DependentUpon>FormChainOfResponsibility.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +141,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Builder\6-Builder.csproj">
+      <Project>{03153B48-4AC4-4A37-A9FA-2DE48527E4CD}</Project>
+      <Name>6-Builder</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ChainOfResponsibility\2-ChainOfResponsibility.csproj">
       <Project>{E991DB37-456F-4D17-8D54-0BDDFBB76A41}</Project>
       <Name>2-ChainOfResponsibility</Name>
@@ -152,6 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\estrutura_chain.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrutura_builder.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

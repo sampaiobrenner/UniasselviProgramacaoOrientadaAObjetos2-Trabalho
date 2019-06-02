@@ -28,21 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormStrategy));
             this.btnImposto = new System.Windows.Forms.Button();
             this.btnInvestimento = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAplicacao = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtParticipantes = new System.Windows.Forms.TextBox();
+            this.txtExemploPratico = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelDiagrama = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.linkFecharDiagrama = new System.Windows.Forms.LinkLabel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDiagrama = new System.Windows.Forms.Button();
             this.panelDiagrama.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,7 +51,7 @@
             // 
             this.btnImposto.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImposto.Location = new System.Drawing.Point(31, 210);
-            this.btnImposto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImposto.Margin = new System.Windows.Forms.Padding(2);
             this.btnImposto.Name = "btnImposto";
             this.btnImposto.Size = new System.Drawing.Size(212, 52);
             this.btnImposto.TabIndex = 0;
@@ -64,7 +63,7 @@
             // 
             this.btnInvestimento.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInvestimento.Location = new System.Drawing.Point(364, 210);
-            this.btnInvestimento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInvestimento.Margin = new System.Windows.Forms.Padding(2);
             this.btnInvestimento.Name = "btnInvestimento";
             this.btnInvestimento.Size = new System.Drawing.Size(212, 52);
             this.btnInvestimento.TabIndex = 1;
@@ -94,29 +93,26 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Aplicação:";
             // 
-            // textBox1
+            // txtAplicacao
             // 
-            this.textBox1.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(31, 110);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(545, 72);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Quando se necessita de um algoritmo que trata de modos diferentes os dados submet" +
-    "idos a ele\r\n\r\n";
+            this.txtAplicacao.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAplicacao.Location = new System.Drawing.Point(31, 110);
+            this.txtAplicacao.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAplicacao.Multiline = true;
+            this.txtAplicacao.Name = "txtAplicacao";
+            this.txtAplicacao.ReadOnly = true;
+            this.txtAplicacao.Size = new System.Drawing.Size(545, 72);
+            this.txtAplicacao.TabIndex = 4;
             // 
-            // textBox2
+            // txtCategoria
             // 
-            this.textBox2.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(31, 50);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(260, 22);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Comportamental";
+            this.txtCategoria.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoria.Location = new System.Drawing.Point(31, 50);
+            this.txtCategoria.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.ReadOnly = true;
+            this.txtCategoria.Size = new System.Drawing.Size(260, 22);
+            this.txtCategoria.TabIndex = 5;
             // 
             // label3
             // 
@@ -129,28 +125,26 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Participantes:";
             // 
-            // textBox3
+            // txtParticipantes
             // 
-            this.textBox3.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(316, 50);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(260, 22);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "Context, Strategy e ConcreteStrategy";
+            this.txtParticipantes.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtParticipantes.Location = new System.Drawing.Point(316, 50);
+            this.txtParticipantes.Margin = new System.Windows.Forms.Padding(2);
+            this.txtParticipantes.Name = "txtParticipantes";
+            this.txtParticipantes.ReadOnly = true;
+            this.txtParticipantes.Size = new System.Drawing.Size(260, 22);
+            this.txtParticipantes.TabIndex = 7;
             // 
-            // textBox4
+            // txtExemploPratico
             // 
-            this.textBox4.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(31, 306);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(545, 76);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.Text = resources.GetString("textBox4.Text");
+            this.txtExemploPratico.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExemploPratico.Location = new System.Drawing.Point(31, 306);
+            this.txtExemploPratico.Margin = new System.Windows.Forms.Padding(2);
+            this.txtExemploPratico.Multiline = true;
+            this.txtExemploPratico.Name = "txtExemploPratico";
+            this.txtExemploPratico.ReadOnly = true;
+            this.txtExemploPratico.Size = new System.Drawing.Size(545, 76);
+            this.txtExemploPratico.TabIndex = 9;
             // 
             // label4
             // 
@@ -169,32 +163,11 @@
             this.panelDiagrama.Controls.Add(this.linkFecharDiagrama);
             this.panelDiagrama.Controls.Add(this.label5);
             this.panelDiagrama.Controls.Add(this.pictureBox1);
-            this.panelDiagrama.Location = new System.Drawing.Point(31, 87);
+            this.panelDiagrama.Location = new System.Drawing.Point(31, 85);
             this.panelDiagrama.Name = "panelDiagrama";
             this.panelDiagrama.Size = new System.Drawing.Size(545, 297);
             this.panelDiagrama.TabIndex = 10;
             this.panelDiagrama.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesingPatternsView.Properties.Resources.estrutura_strategy;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(458, 231);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 10);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 17);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Diagrama";
             // 
             // linkFecharDiagrama
             // 
@@ -208,6 +181,27 @@
             this.linkFecharDiagrama.TabStop = true;
             this.linkFecharDiagrama.Text = "Fechar";
             this.linkFecharDiagrama.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkFecharDiagrama_LinkClicked);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Lucida Sans", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(2, 10);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 17);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Diagrama";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesingPatternsView.Properties.Resources.estrutura_strategy;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(458, 231);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnDiagrama
             // 
@@ -227,22 +221,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 396);
             this.Controls.Add(this.panelDiagrama);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtExemploPratico);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtParticipantes);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCategoria);
+            this.Controls.Add(this.txtAplicacao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInvestimento);
             this.Controls.Add(this.btnImposto);
             this.Controls.Add(this.btnDiagrama);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximizeBox = false;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormStrategy";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Strategy / Policy";
             this.panelDiagrama.ResumeLayout(false);
             this.panelDiagrama.PerformLayout();
@@ -258,11 +249,11 @@
         private System.Windows.Forms.Button btnInvestimento;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAplicacao;
+        private System.Windows.Forms.TextBox txtCategoria;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtParticipantes;
+        private System.Windows.Forms.TextBox txtExemploPratico;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelDiagrama;
         private System.Windows.Forms.PictureBox pictureBox1;

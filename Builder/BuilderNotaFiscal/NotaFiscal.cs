@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Windows.Forms;
 
 namespace Builder.BuilderNotaFiscal
 {
@@ -13,27 +15,35 @@ namespace Builder.BuilderNotaFiscal
             ValorBruto = valorBruto;
             Impostos = impostos;
             DataDeEmissao = dataDeEmissao;
-            Obstervacoes = observacoes;
+            Observacoes = observacoes;
             Itens = itens;
         }
 
-        public string Cnpj { get; }
-        public DateTime DataDeEmissao { get; }
-        public double Impostos { get; }
-        public IList<ItemDaNota> Itens { get; }
-        public string Obstervacoes { get; }
-        public string RazaoSocial { get; }
-        public double ValorBruto { get; }
+        private string Cnpj { get; }
+        private DateTime DataDeEmissao { get; }
+        private double Impostos { get; }
+        private IList<ItemDaNota> Itens { get; }
+        private string Observacoes { get; }
+        private string RazaoSocial { get; }
+        private double ValorBruto { get; }
 
         public void Imprime()
         {
-            Console.WriteLine(RazaoSocial);
-            Console.WriteLine(Cnpj);
-            foreach (var item in Itens) Console.WriteLine("{0} - {1}", item.Nome, item.Valor);
-            Console.WriteLine(ValorBruto);
-            Console.WriteLine(Impostos);
-            Console.WriteLine(DataDeEmissao.ToString("dd/MM/yyyy"));
-            Console.WriteLine(Obstervacoes);
+            var impressao = new StringBuilder()
+                .Append($"Razão Social: {RazaoSocial}                                       {Environment.NewLine}")
+                .Append($"CNPJ: {Cnpj}                                                      {Environment.NewLine}");
+
+            foreach (var item in Itens)
+                impressao.Append($"Item: {item.Nome} - Valor: {item.Valor}                  {Environment.NewLine}");
+
+            var str = impressao
+                .Append($"Valor Bruto: {ValorBruto}                                         {Environment.NewLine}")
+                .Append($"Impostos: {Impostos}                                              {Environment.NewLine}")
+                .Append($"Data de emisssão {DataDeEmissao:dd/MM/yyyy}                       {Environment.NewLine}")
+                .Append($"Observações {Observacoes}                                         {Environment.NewLine}")
+                .ToString();
+
+            MessageBox.Show(str);
         }
     }
 }

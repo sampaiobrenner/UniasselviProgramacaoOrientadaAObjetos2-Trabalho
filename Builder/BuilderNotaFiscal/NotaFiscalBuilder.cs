@@ -5,55 +5,56 @@ namespace Builder.BuilderNotaFiscal
 {
     public class NotaFiscalBuilder
     {
-        public IList<ItemDaNota> Itens = new List<ItemDaNota>();
+        private readonly IList<ItemDaNota> _itens;
 
         public NotaFiscalBuilder()
         {
             DataDeEmissao = DateTime.Now;
+            _itens = new List<ItemDaNota>();
         }
 
-        public string Cnpj { get; private set; }
-        public DateTime DataDeEmissao { get; private set; }
-        public double Impostos { get; private set; }
-        public string Obstervacoes { get; private set; }
-        public string RazaoSocial { get; private set; }
-        public double ValorBruto { get; private set; }
+        private string Cnpj { get; set; }
+        private DateTime DataDeEmissao { get; set; }
+        private double Impostos { get; set; }
+        private string Observacoes { get; set; }
+        private string RazaoSocial { get; set; }
+        private double ValorBruto { get; set; }
 
-        public NotaFiscalBuilder Com(ItemDaNota item)
+        public NotaFiscal Build()
         {
-            Itens.Add(item);
-            ValorBruto += item.Valor;
-            Impostos = ValorBruto * 0.05;
-            return this;
+            var nota = new NotaFiscal(RazaoSocial, Cnpj, ValorBruto, Impostos, DataDeEmissao, Observacoes, _itens);
+            return nota;
         }
 
-        public NotaFiscalBuilder ComCnpj(string cnpj)
+        public NotaFiscalBuilder WithCnpj(string cnpj)
         {
             Cnpj = cnpj;
             return this;
         }
 
-        public NotaFiscalBuilder ComObservacoes(string observacoes)
-        {
-            Obstervacoes = observacoes;
-            return this;
-        }
-
-        public NotaFiscalBuilder ComRazaoSocial(string razaoSocial)
-        {
-            RazaoSocial = razaoSocial;
-            return this;
-        }
-
-        public NotaFiscal Constroi()
-        {
-            var nota = new NotaFiscal(RazaoSocial, Cnpj, ValorBruto, Impostos, DataDeEmissao, Obstervacoes, Itens);
-            return nota;
-        }
-
-        public NotaFiscalBuilder NaData(DateTime novaData)
+        public NotaFiscalBuilder WithData(DateTime novaData)
         {
             DataDeEmissao = novaData;
+            return this;
+        }
+
+        public NotaFiscalBuilder WithItem(ItemDaNota item)
+        {
+            _itens.Add(item);
+            ValorBruto += item.Valor;
+            Impostos = ValorBruto * 0.05;
+            return this;
+        }
+
+        public NotaFiscalBuilder WithObservacoes(string observacoes)
+        {
+            Observacoes = observacoes;
+            return this;
+        }
+
+        public NotaFiscalBuilder WithrazaoSocial(string razaoSocial)
+        {
+            RazaoSocial = razaoSocial;
             return this;
         }
     }

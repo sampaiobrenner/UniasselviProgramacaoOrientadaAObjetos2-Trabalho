@@ -63,6 +63,16 @@ namespace DesingPatternsView.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap estrutura_builder {
+            get {
+                object obj = ResourceManager.GetObject("estrutura_builder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap estrutura_chain {
             get {
                 object obj = ResourceManager.GetObject("estrutura_chain", resourceCulture);
