@@ -108,14 +108,26 @@
     <EmbeddedResource Include="FormChainOfResponsibility.resx">
       <DependentUpon>FormChainOfResponsibility.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDecoretor.resx">
+      <DependentUpon>FormDecoretor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormExemplos.resx">
       <DependentUpon>FormExemplos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModelo.resx">
       <DependentUpon>FormModelo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormObserver.resx">
+      <DependentUpon>FormObserver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormState.resx">
+      <DependentUpon>FormState.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormStrategy.resx">
       <DependentUpon>FormStrategy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTemplateMethod.resx">
+      <DependentUpon>FormTemplateMethod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
