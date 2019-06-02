@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Text;
+using System.Windows.Forms;
 
 namespace Decorator.banco
 {
@@ -6,15 +8,19 @@ namespace Decorator.banco
     {
         public void Imprime(IEnumerable<Conta> contas)
         {
-            Cabecalho();
-            Corpo(contas);
-            Rodape();
+            var str = new StringBuilder()
+                .Append(Cabecalho())
+                .Append(Corpo(contas))
+                .Append(Rodape())
+                .ToString();
+
+            MessageBox.Show(str);
         }
 
-        protected abstract void Cabecalho();
+        protected abstract string Cabecalho();
 
-        protected abstract void Corpo(IEnumerable<Conta> contas);
+        protected abstract string Corpo(IEnumerable<Conta> contas);
 
-        protected abstract void Rodape();
+        protected abstract string Rodape();
     }
 }

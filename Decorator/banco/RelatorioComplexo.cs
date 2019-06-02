@@ -1,30 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Decorator.banco
 {
     public class RelatorioComplexo : TemplateRelatorio
     {
-        protected override void Cabecalho()
+        protected override string Cabecalho()
         {
-            Console.WriteLine("Banco XYZ");
-            Console.WriteLine("Avenida Paulista, 1234");
-            Console.WriteLine("(11) 1234-5678");
-            Console.WriteLine("----------------------------------");
+            return new StringBuilder()
+                .Append($"Banco XYZ                             {Environment.NewLine}")
+                .Append($"Avenida Paulista, 1234                {Environment.NewLine}")
+                .Append($"(11) 1234-5678                        {Environment.NewLine}")
+                .Append($"----------------------------------    {Environment.NewLine}")
+                .ToString();
         }
 
-        protected override void Corpo(IEnumerable<Conta> contas)
+        protected override string Corpo(IEnumerable<Conta> contas)
         {
+            var str = new StringBuilder();
+
             foreach (var c in contas)
-                Console.WriteLine(c.Titutar + " - " + c.Agencia + " - " + c.NumeroDaConta + " - " + c.Saldo + " - " +
-                                  c.DataDeAbertura.ToString("dd/MM/yyyy"));
+                str.Append($"{c.Titutar} - {c.Agencia} - {c.NumeroDaConta} - {c.Saldo} - {c.DataDeAbertura:dd/MM/yyyy}  {Environment.NewLine}");
+
+            return str.ToString();
         }
 
-        protected override void Rodape()
+        protected override string Rodape()
         {
-            Console.WriteLine("----------------------------------");
-            Console.WriteLine("banco@xyz.com.br");
-            Console.WriteLine(DateTime.Now);
+            return new StringBuilder()
+                .Append($"----------------------------------    {Environment.NewLine}")
+                .Append($"banco@xyz.com.br                      {Environment.NewLine}")
+                .Append($"{DateTime.Now}                        {Environment.NewLine}")
+                .ToString();
         }
     }
 }
