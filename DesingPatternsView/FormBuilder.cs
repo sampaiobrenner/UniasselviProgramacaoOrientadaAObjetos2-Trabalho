@@ -29,7 +29,7 @@ namespace DesingPatternsView
         private void PrencherCampos()
         {
             txtParticipantes.Text =
-                @"Director, Builder , Concrete Builde, Product ";
+                @"Director, Builder , Concrete Builder, Product ";
 
             txtExemploPratico.Text =
                 @"Com o padrão Chain, evitamos a ocorrência de diversos condicionais aninhados, mantendo maior elegância e facilidade de manutenção " +
