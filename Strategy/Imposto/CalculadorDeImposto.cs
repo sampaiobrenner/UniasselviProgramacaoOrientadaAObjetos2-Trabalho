@@ -8,7 +8,7 @@ namespace Strategy.Imposto
         internal static void RealizaCalculo(Orcamento orcamento, IImposto imposto)
         {
             var valor = imposto.Calcula(orcamento);
-            MessageBox.Show(valor.ToString(CultureInfo.InvariantCulture));
+            MessageBox.Show($"Valor do imposto calculado: {valor.ToString(CultureInfo.InvariantCulture)}");
         }
     }
 }
