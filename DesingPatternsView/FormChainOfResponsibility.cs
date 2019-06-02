@@ -38,7 +38,7 @@ namespace DesingPatternsView
 
             txtExemploPratico.Text =
                 @"Com o padrão Chain, evitamos a ocorrência de diversos condicionais aninhados, mantendo maior elegância e facilidade de manutenção " +
-                @"em nossa aplicação. Em caso de uma nova regra de negócio que precise sem implementada, basta criar uma nova classe e adicionar ela como " +
+                @"em nossa aplicação. Caso de uma nova regra de negócio que precise ser implementada, basta criar uma nova classe e adicionar ela como " +
                 @"próximo na sequência de execução. ";
 
             txtAplicacao.Text =
