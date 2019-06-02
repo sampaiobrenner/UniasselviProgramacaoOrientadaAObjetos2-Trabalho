@@ -36,6 +36,7 @@
             this.btnBuilder = new System.Windows.Forms.Button();
             this.btnObserver = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnStrategy
@@ -133,11 +134,21 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Exemplos práticos - Desing Patterns";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(103, 283);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 13);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Desenvolvido por Matheus Brenner";
+            // 
             // FormExemplos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 275);
+            this.ClientSize = new System.Drawing.Size(363, 307);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnObserver);
             this.Controls.Add(this.btnBuilder);
@@ -167,5 +178,6 @@
         private System.Windows.Forms.Button btnBuilder;
         private System.Windows.Forms.Button btnObserver;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

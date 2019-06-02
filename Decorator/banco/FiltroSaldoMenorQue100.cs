@@ -17,7 +17,10 @@ namespace Decorator.banco
             foreach (var conta in contas)
                 if (conta.Saldo < 100)
                     ContasFiltradas.Add(conta);
-            foreach (var conta in Proximo(contas)) ContasFiltradas.Add(conta);
+
+            foreach (var conta in Proximo(contas))
+                ContasFiltradas.Add(conta);
+
             return ContasFiltradas;
         }
     }

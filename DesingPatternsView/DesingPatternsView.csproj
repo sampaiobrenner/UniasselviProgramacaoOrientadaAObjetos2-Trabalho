@@ -161,6 +161,10 @@
       <Project>{E991DB37-456F-4D17-8D54-0BDDFBB76A41}</Project>
       <Name>2-ChainOfResponsibility</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Decorator\4-Decorator.csproj">
+      <Project>{0C0C64C7-5AF6-4F82-B373-DF12910F3DBD}</Project>
+      <Name>4-Decorator</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Strategy\1-Strategy.csproj">
       <Project>{DAD3D4CF-ACB9-4C8B-BD10-DDCBD5490DB3}</Project>
       <Name>1-Strategy</Name>
@@ -174,6 +178,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\estrutura_builder.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrutura_decoretor_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrutura_decoretor_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

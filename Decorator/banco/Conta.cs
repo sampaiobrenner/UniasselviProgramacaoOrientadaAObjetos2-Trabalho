@@ -13,10 +13,10 @@ namespace Decorator.banco
             DataDeAbertura = dataDeAbertura;
         }
 
-        public int Agencia { get; set; }
-        public DateTime DataDeAbertura { get; set; }
-        public int NumeroDaConta { get; set; }
-        public double Saldo { get; set; }
-        public string Titutar { get; set; }
+        public int Agencia { get; }
+        public DateTime DataDeAbertura { get; }
+        public int NumeroDaConta { get; }
+        public double Saldo { get; }
+        public string Titutar { get; }
     }
 }

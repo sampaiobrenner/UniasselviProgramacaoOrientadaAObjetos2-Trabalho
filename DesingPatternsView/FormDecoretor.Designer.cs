@@ -31,7 +31,6 @@
             this.panelDiagrama = new System.Windows.Forms.Panel();
             this.linkFecharDiagrama = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtExemploPratico = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtParticipantes = new System.Windows.Forms.TextBox();
@@ -40,18 +39,27 @@
             this.txtAplicacao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnNotaFiscal = new System.Windows.Forms.Button();
+            this.btnFiltroDeContas = new System.Windows.Forms.Button();
             this.btnDiagrama = new System.Windows.Forms.Button();
+            this.btnImposto = new System.Windows.Forms.Button();
+            this.linkImagem1 = new System.Windows.Forms.LinkLabel();
+            this.linkImagem2 = new System.Windows.Forms.LinkLabel();
+            this.imagem2 = new System.Windows.Forms.PictureBox();
+            this.imagem1 = new System.Windows.Forms.PictureBox();
             this.panelDiagrama.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagem1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDiagrama
             // 
             this.panelDiagrama.BackColor = System.Drawing.SystemColors.Control;
+            this.panelDiagrama.Controls.Add(this.imagem2);
+            this.panelDiagrama.Controls.Add(this.linkImagem2);
+            this.panelDiagrama.Controls.Add(this.linkImagem1);
             this.panelDiagrama.Controls.Add(this.linkFecharDiagrama);
             this.panelDiagrama.Controls.Add(this.label5);
-            this.panelDiagrama.Controls.Add(this.pictureBox1);
+            this.panelDiagrama.Controls.Add(this.imagem1);
             this.panelDiagrama.Location = new System.Drawing.Point(36, 80);
             this.panelDiagrama.Name = "panelDiagrama";
             this.panelDiagrama.Size = new System.Drawing.Size(545, 297);
@@ -69,6 +77,7 @@
             this.linkFecharDiagrama.TabIndex = 4;
             this.linkFecharDiagrama.TabStop = true;
             this.linkFecharDiagrama.Text = "Fechar";
+            this.linkFecharDiagrama.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkFecharDiagrama_LinkClicked);
             // 
             // label5
             // 
@@ -80,16 +89,6 @@
             this.label5.Size = new System.Drawing.Size(75, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "Diagrama";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesingPatternsView.Properties.Resources.estrutura_builder;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(458, 231);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // txtExemploPratico
             // 
@@ -177,16 +176,17 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Categoria:";
             // 
-            // btnNotaFiscal
+            // btnFiltroDeContas
             // 
-            this.btnNotaFiscal.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotaFiscal.Location = new System.Drawing.Point(36, 205);
-            this.btnNotaFiscal.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNotaFiscal.Name = "btnNotaFiscal";
-            this.btnNotaFiscal.Size = new System.Drawing.Size(212, 52);
-            this.btnNotaFiscal.TabIndex = 24;
-            this.btnNotaFiscal.Text = "Executar exemplo nota fiscal";
-            this.btnNotaFiscal.UseVisualStyleBackColor = true;
+            this.btnFiltroDeContas.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroDeContas.Location = new System.Drawing.Point(36, 205);
+            this.btnFiltroDeContas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFiltroDeContas.Name = "btnFiltroDeContas";
+            this.btnFiltroDeContas.Size = new System.Drawing.Size(212, 52);
+            this.btnFiltroDeContas.TabIndex = 24;
+            this.btnFiltroDeContas.Text = "Executar exemplo filtro de contas";
+            this.btnFiltroDeContas.UseVisualStyleBackColor = true;
+            this.btnFiltroDeContas.Click += new System.EventHandler(this.BtnFiltroDeContas_Click);
             // 
             // btnDiagrama
             // 
@@ -198,6 +198,66 @@
             this.btnDiagrama.TabIndex = 34;
             this.btnDiagrama.Text = "Diagrama";
             this.btnDiagrama.UseVisualStyleBackColor = true;
+            this.btnDiagrama.Click += new System.EventHandler(this.BtnDiagrama_Click);
+            // 
+            // btnImposto
+            // 
+            this.btnImposto.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImposto.Location = new System.Drawing.Point(369, 205);
+            this.btnImposto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImposto.Name = "btnImposto";
+            this.btnImposto.Size = new System.Drawing.Size(212, 52);
+            this.btnImposto.TabIndex = 35;
+            this.btnImposto.Text = "Executar exemplo imposto";
+            this.btnImposto.UseVisualStyleBackColor = true;
+            this.btnImposto.Click += new System.EventHandler(this.BtnImposto_Click);
+            // 
+            // linkImagem1
+            // 
+            this.linkImagem1.AutoSize = true;
+            this.linkImagem1.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkImagem1.LinkColor = System.Drawing.Color.Black;
+            this.linkImagem1.Location = new System.Drawing.Point(194, 11);
+            this.linkImagem1.Name = "linkImagem1";
+            this.linkImagem1.Size = new System.Drawing.Size(66, 15);
+            this.linkImagem1.TabIndex = 5;
+            this.linkImagem1.TabStop = true;
+            this.linkImagem1.Text = "Imagem 1";
+            this.linkImagem1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkImagem1_LinkClicked);
+            // 
+            // linkImagem2
+            // 
+            this.linkImagem2.AutoSize = true;
+            this.linkImagem2.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkImagem2.LinkColor = System.Drawing.Color.Black;
+            this.linkImagem2.Location = new System.Drawing.Point(282, 11);
+            this.linkImagem2.Name = "linkImagem2";
+            this.linkImagem2.Size = new System.Drawing.Size(66, 15);
+            this.linkImagem2.TabIndex = 6;
+            this.linkImagem2.TabStop = true;
+            this.linkImagem2.Text = "Imagem 2";
+            this.linkImagem2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkImagem2_LinkClicked);
+            // 
+            // imagem2
+            // 
+            this.imagem2.Image = global::DesingPatternsView.Properties.Resources.estrutura_decoretor_2;
+            this.imagem2.Location = new System.Drawing.Point(105, 42);
+            this.imagem2.Name = "imagem2";
+            this.imagem2.Size = new System.Drawing.Size(356, 231);
+            this.imagem2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagem2.TabIndex = 7;
+            this.imagem2.TabStop = false;
+            this.imagem2.Visible = false;
+            // 
+            // imagem1
+            // 
+            this.imagem1.Image = global::DesingPatternsView.Properties.Resources.estrutura_decoretor_1;
+            this.imagem1.Location = new System.Drawing.Point(48, 42);
+            this.imagem1.Name = "imagem1";
+            this.imagem1.Size = new System.Drawing.Size(458, 231);
+            this.imagem1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagem1.TabIndex = 0;
+            this.imagem1.TabStop = false;
             // 
             // FormDecoretor
             // 
@@ -213,13 +273,15 @@
             this.Controls.Add(this.txtAplicacao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnNotaFiscal);
+            this.Controls.Add(this.btnFiltroDeContas);
             this.Controls.Add(this.btnDiagrama);
+            this.Controls.Add(this.btnImposto);
             this.Name = "FormDecoretor";
-            this.Text = "FormDecoretor";
+            this.Text = "Decorator";
             this.panelDiagrama.ResumeLayout(false);
             this.panelDiagrama.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagem1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,7 +292,7 @@
         private System.Windows.Forms.Panel panelDiagrama;
         private System.Windows.Forms.LinkLabel linkFecharDiagrama;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imagem1;
         private System.Windows.Forms.TextBox txtExemploPratico;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtParticipantes;
@@ -239,7 +301,11 @@
         private System.Windows.Forms.TextBox txtAplicacao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnNotaFiscal;
+        private System.Windows.Forms.Button btnFiltroDeContas;
         private System.Windows.Forms.Button btnDiagrama;
+        private System.Windows.Forms.Button btnImposto;
+        private System.Windows.Forms.LinkLabel linkImagem2;
+        private System.Windows.Forms.LinkLabel linkImagem1;
+        private System.Windows.Forms.PictureBox imagem2;
     }
 }

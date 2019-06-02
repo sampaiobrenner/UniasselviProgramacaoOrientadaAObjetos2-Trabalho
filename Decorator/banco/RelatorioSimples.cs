@@ -5,18 +5,18 @@ namespace Decorator.banco
 {
     public class RelatorioSimples : TemplateRelatorio
     {
-        public override void Cabecalho()
+        protected override void Cabecalho()
         {
             Console.WriteLine("Banco XYZ");
             Console.WriteLine("----------------------------------");
         }
 
-        public override void Corpo(IList<Conta> contas)
+        protected override void Corpo(IEnumerable<Conta> contas)
         {
             foreach (var c in contas) Console.WriteLine(c.Titutar + " - " + c.Saldo);
         }
 
-        public override void Rodape()
+        protected override void Rodape()
         {
             Console.WriteLine("----------------------------------");
 

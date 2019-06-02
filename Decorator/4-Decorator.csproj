@@ -5,12 +5,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0C0C64C7-5AF6-4F82-B373-DF12910F3DBD}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>Decorator</RootNamespace>
     <AssemblyName>Decorator</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,9 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,27 +47,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="banco\Filtro.cs" />
-    <Compile Include="banco\FiltroContasAbertaNoMesCorrente.cs" />
-    <Compile Include="banco\FiltroSaldoMaior500k.cs" />
-    <Compile Include="banco\FiltroSaldoMenorQue100.cs" />
-    <Compile Include="imposto\ICCC.cs" />
-    <Compile Include="imposto\ICMS.cs" />
-    <Compile Include="imposto\ICPP.cs" />
-    <Compile Include="imposto\IHIT.cs" />
-    <Compile Include="imposto\IKCV.cs" />
-    <Compile Include="imposto\Imposto.cs" />
-    <Compile Include="imposto\ImpostoMuitoAlto.cs" />
-    <Compile Include="imposto\ISS.cs" />
-    <Compile Include="imposto\Item.cs" />
-    <Compile Include="imposto\Orcamento.cs" />
-    <Compile Include="imposto\TemplateCondicaoImposto.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Banco\Filtro.cs" />
+    <Compile Include="Banco\FiltroContasAbertaNoMesCorrente.cs" />
+    <Compile Include="Banco\FiltroSaldoMaior500k.cs" />
+    <Compile Include="Banco\FiltroSaldoMenorQue100.cs" />
+    <Compile Include="Imposto\ICCC.cs" />
+    <Compile Include="Imposto\ICMS.cs" />
+    <Compile Include="Imposto\ICPP.cs" />
+    <Compile Include="Imposto\IHIT.cs" />
+    <Compile Include="Imposto\IKCV.cs" />
+    <Compile Include="Imposto\Imposto.cs" />
+    <Compile Include="Imposto\ImpostoMuitoAlto.cs" />
+    <Compile Include="Imposto\ISS.cs" />
+    <Compile Include="Imposto\Item.cs" />
+    <Compile Include="Imposto\Orcamento.cs" />
+    <Compile Include="Imposto\TemplateCondicaoImposto.cs" />
+    <Compile Include="ExemplosDecorator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="banco\Conta.cs" />
-    <Compile Include="banco\RelatorioComplexo.cs" />
-    <Compile Include="banco\RelatorioSimples.cs" />
-    <Compile Include="banco\TemplateRelatorio.cs" />
+    <Compile Include="Banco\Conta.cs" />
+    <Compile Include="Banco\RelatorioComplexo.cs" />
+    <Compile Include="Banco\RelatorioSimples.cs" />
+    <Compile Include="Banco\TemplateRelatorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
