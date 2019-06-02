@@ -1,8 +1,8 @@
-﻿namespace ChainOfResponsibility
+﻿namespace ChainOfResponsibility.Desconto
 {
-    public class CalculadorDeDescontos
+    public static class CalculadorDeDescontos
     {
-        public double Calcula(Orcamento orcamento)
+        public static double Calcula(Orcamento orcamento)
         {
             IDesconto d1 = new DescontoMais5Itens();
             IDesconto d2 = new DescontoMaisDe500();

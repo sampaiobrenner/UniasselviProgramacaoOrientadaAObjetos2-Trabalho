@@ -1,12 +1,12 @@
-﻿namespace ChainOfResponsibility
+﻿namespace ChainOfResponsibility.Requisicao
 {
     public class Requisicao
     {
         public Requisicao(Formato formato)
         {
-            this.Formato = formato;
+            Formato = formato;
         }
 
-        public Formato Formato { get; set; }
+        public Formato Formato { get; }
     }
 }

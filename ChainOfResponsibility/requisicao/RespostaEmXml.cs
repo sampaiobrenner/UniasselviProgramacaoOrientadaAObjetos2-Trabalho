@@ -1,38 +1,43 @@
 ﻿using System;
+using System.Text;
+using System.Windows.Forms;
 
-namespace ChainOfResponsibility
+namespace ChainOfResponsibility.Requisicao
 {
     public class RespostaEmXml : IResposta
     {
         public RespostaEmXml(IResposta proximo)
         {
-            this.Proximo = proximo;
+            Proximo = proximo;
         }
 
         public RespostaEmXml()
         {
-            this.Proximo = null;
+            Proximo = null;
         }
 
         public IResposta Proximo { get; set; }
 
         public void Responde(Requisicao requisicao, Conta conta)
         {
-            if (requisicao.Formato == Formato.XML)
+            if (requisicao.Formato == Formato.Xml)
             {
-                Console.WriteLine("<conta>");
-                Console.WriteLine("   <titular>");
-                Console.WriteLine("      " + conta.Titular);
-                Console.WriteLine("   </titular>");
-                Console.WriteLine("   <saldo>");
-                Console.WriteLine("      " + conta.Saldo);
-                Console.WriteLine("   </saldo>");
-                Console.WriteLine("</conta>");
+                var xml = new StringBuilder()
+                    .Append($"<conta>                           {Environment.NewLine}")
+                    .Append($"   <titular>                      {Environment.NewLine}")
+                    .Append($"         {conta.Titular }         {Environment.NewLine}")
+                    .Append($"   </titular>                     {Environment.NewLine}")
+                    .Append($"   <saldo>                        {Environment.NewLine}")
+                    .Append($"         {conta.Saldo}            {Environment.NewLine}")
+                    .Append($"   </saldo>                       {Environment.NewLine}")
+                    .Append($"</conta>                          {Environment.NewLine}")
+                    .ToString();
+
+                MessageBox.Show(xml);
+                return;
             }
-            else
-            {
-                Proximo.Responde(requisicao, conta);
-            }
+
+            Proximo.Responde(requisicao, conta);
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿namespace ChainOfResponsibility
+﻿namespace ChainOfResponsibility.Requisicao
 {
-    public class DeterminadorDeResposta
+    public static class DeterminadorDeResposta
     {
-        public void executa(Requisicao req, Conta conta)
+        public static void Executa(Requisicao req, Conta conta)
         {
             IResposta r1 = new RespostaEmXml(
                             new RespostaEmCsv(

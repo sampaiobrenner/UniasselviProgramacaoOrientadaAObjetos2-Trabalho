@@ -1,9 +1,9 @@
-﻿namespace ChainOfResponsibility
+﻿namespace ChainOfResponsibility.Requisicao
 {
     public enum Formato
     {
-        XML,
-        CSV,
-        PORCENTO
+        Xml,
+        Csv,
+        Porcento
     }
 }

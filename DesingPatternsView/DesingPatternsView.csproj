@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F56B558C-D7DB-4211-BEE4-A7BAE07A5F8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DesingPatternsView</RootNamespace>
+    <AssemblyName>DesingPatternsView</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuilder.Designer.cs">
+      <DependentUpon>FormBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChainOfResponsibility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChainOfResponsibility.Designer.cs">
+      <DependentUpon>FormChainOfResponsibility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDecoretor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDecoretor.Designer.cs">
+      <DependentUpon>FormDecoretor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExemplos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExemplos.Designer.cs">
+      <DependentUpon>FormExemplos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModelo.Designer.cs">
+      <DependentUpon>FormModelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormObserver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObserver.Designer.cs">
+      <DependentUpon>FormObserver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormState.Designer.cs">
+      <DependentUpon>FormState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStrategy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStrategy.Designer.cs">
+      <DependentUpon>FormStrategy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTemplateMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTemplateMethod.Designer.cs">
+      <DependentUpon>FormTemplateMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBuilder.resx">
+      <DependentUpon>FormBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChainOfResponsibility.resx">
+      <DependentUpon>FormChainOfResponsibility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExemplos.resx">
+      <DependentUpon>FormExemplos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModelo.resx">
+      <DependentUpon>FormModelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStrategy.resx">
+      <DependentUpon>FormStrategy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Builder\6-Builder.csproj">
+      <Project>{03153B48-4AC4-4A37-A9FA-2DE48527E4CD}</Project>
+      <Name>6-Builder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChainOfResponsibility\2-ChainOfResponsibility.csproj">
+      <Project>{E991DB37-456F-4D17-8D54-0BDDFBB76A41}</Project>
+      <Name>2-ChainOfResponsibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strategy\1-Strategy.csproj">
+      <Project>{DAD3D4CF-ACB9-4C8B-BD10-DDCBD5490DB3}</Project>
+      <Name>1-Strategy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrutura_strategy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrutura_chain.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrutura_builder.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

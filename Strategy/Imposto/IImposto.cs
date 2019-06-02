@@ -1,6 +1,6 @@
-﻿namespace Strategy
+﻿namespace Strategy.Imposto
 {
-    public interface Imposto
+    public interface IImposto
     {
         double Calcula(Orcamento orcamento);
     }

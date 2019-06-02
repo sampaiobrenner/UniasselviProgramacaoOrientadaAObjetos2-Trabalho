@@ -1,14 +1,15 @@
-﻿using System;
+﻿using System.Globalization;
+using System.Windows.Forms;
 
-namespace Strategy
+namespace Strategy.Investimento
 {
-    public class RealizadorDeInvestimentos
+    internal static class RealizadorDeInvestimentos
     {
-        public void Calcula(Conta conta, Investimento investimento)
+        internal static void Calcula(Conta conta, IInvestimento investimento)
         {
-            var valor = investimento.calcula(conta);
+            var valor = investimento.Calcula(conta);
             conta.Saldo += valor * 0.75;
-            Console.WriteLine(conta.Saldo);
+            MessageBox.Show($"Saldo atual: {conta.Saldo.ToString(CultureInfo.InvariantCulture)}");
         }
     }
 }

@@ -1,13 +1,10 @@
-﻿namespace TemplateMethod
+﻿namespace TemplateMethod.imposto
 {
     public abstract class TemplateCondicaoImposto : Imposto
     {
         public double Calcula(Orcamento orcamento)
         {
-            if (CondicaoMaiorImposto(orcamento))
-            {
-                return MaiorImposto(orcamento);
-            }
+            if (CondicaoMaiorImposto(orcamento)) return MaiorImposto(orcamento);
 
             return MenorImposto(orcamento);
         }

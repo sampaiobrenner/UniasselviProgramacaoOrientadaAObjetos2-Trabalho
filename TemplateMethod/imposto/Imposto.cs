@@ -1,4 +1,4 @@
-﻿namespace TemplateMethod
+﻿namespace TemplateMethod.imposto
 {
     public interface Imposto
     {

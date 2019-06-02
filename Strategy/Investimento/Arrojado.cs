@@ -1,25 +1,20 @@
 ﻿using System;
 
-namespace Strategy
+namespace Strategy.Investimento
 {
-    internal class Arrojado : Investimento
+    internal class Arrojado : IInvestimento
     {
-        public double calcula(Conta conta)
+        public double Calcula(Conta conta)
         {
             var sorte = new Random().Next(100);
 
             if (sorte < 20)
-            {
                 return (conta.Saldo * 0.05);
-            }
-            else if (sorte < 50)
-            {
+
+            if (sorte < 50)
                 return (conta.Saldo * 0.03);
-            }
-            else
-            {
-                return (conta.Saldo * 0.006);
-            }
+
+            return (conta.Saldo * 0.006);
         }
     }
 }

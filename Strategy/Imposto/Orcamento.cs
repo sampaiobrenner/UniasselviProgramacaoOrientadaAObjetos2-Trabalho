@@ -1,14 +1,12 @@
-﻿using System;
-
-namespace Strategy
+﻿namespace Strategy.Imposto
 {
     public class Orcamento
     {
         public Orcamento(double valor)
         {
-            this.Valor = valor;
+            Valor = valor;
         }
 
-        public Double Valor { get; private set; }
+        public double Valor { get;  }
     }
 }

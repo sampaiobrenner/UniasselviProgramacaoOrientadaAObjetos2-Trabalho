@@ -6,7 +6,7 @@
         {
         }
 
-        public IHIT() : base()
+        public IHIT()
         {
         }
 
@@ -17,7 +17,7 @@
 
         public override double MaiorImposto(Orcamento orcamento)
         {
-            return (orcamento.Valor * 0.13) + 100;
+            return orcamento.Valor * 0.13 + 100;
         }
 
         public override double MenorImposto(Orcamento orcamento)
@@ -31,17 +31,10 @@
             foreach (var item in orcamento.Itens)
             {
                 itensComMesmoNome = 0;
-                for (int i = 0; i < orcamento.Itens.Count; i++)
-                {
+                for (var i = 0; i < orcamento.Itens.Count; i++)
                     if (item.Nome == orcamento.Itens[i].Nome)
-                    {
                         itensComMesmoNome++;
-                    }
-                }
-                if (itensComMesmoNome >= 2)
-                {
-                    return true;
-                }
+                if (itensComMesmoNome >= 2) return true;
             }
 
             return false;

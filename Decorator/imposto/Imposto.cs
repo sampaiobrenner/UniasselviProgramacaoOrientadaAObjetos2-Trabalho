@@ -4,12 +4,12 @@
     {
         public Imposto(Imposto outroImposto)
         {
-            this.OutroImposto = outroImposto;
+            OutroImposto = outroImposto;
         }
 
         public Imposto()
         {
-            this.OutroImposto = null;
+            OutroImposto = null;
         }
 
         public Imposto OutroImposto { get; set; }
@@ -18,10 +18,7 @@
 
         protected double CalculoDoOutroImposto(Orcamento orcamento)
         {
-            if (OutroImposto == null)
-            {
-                return 0;
-            }
+            if (OutroImposto == null) return 0;
 
             return OutroImposto.Calcula(orcamento);
         }

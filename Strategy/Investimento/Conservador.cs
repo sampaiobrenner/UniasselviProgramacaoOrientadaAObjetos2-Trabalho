@@ -1,10 +1,7 @@
-﻿namespace Strategy
+﻿namespace Strategy.Investimento
 {
-    public class Conservador : Investimento
+    public class Conservador : IInvestimento
     {
-        public double calcula(Conta conta)
-        {
-            return (conta.Saldo * 0.008);
-        }
+        public double Calcula(Conta conta) => (conta.Saldo * 0.008);
     }
 }

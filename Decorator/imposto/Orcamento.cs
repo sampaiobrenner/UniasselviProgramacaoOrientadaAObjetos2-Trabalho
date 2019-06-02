@@ -16,7 +16,7 @@ namespace Decorator.imposto
         public void AdicionaItem(Item item)
         {
             Itens.Add(item);
-            this.Valor += item.Valor;
+            Valor += item.Valor;
         }
     }
 }

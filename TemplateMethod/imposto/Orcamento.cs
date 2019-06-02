@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TemplateMethod
+namespace TemplateMethod.imposto
 {
     public class Orcamento
     {
@@ -16,7 +16,7 @@ namespace TemplateMethod
         public void AdicionaItem(Item item)
         {
             Itens.Add(item);
-            this.Valor += item.Valor;
+            Valor += item.Valor;
         }
     }
 }

@@ -1,10 +1,7 @@
-﻿namespace Strategy
+﻿namespace Strategy.Imposto
 {
-    public class ISS : Imposto
+    public class Iss : IImposto
     {
-        public double Calcula(Orcamento orcamento)
-        {
-            return orcamento.Valor * 0.06;
-        }
+        public double Calcula(Orcamento orcamento) => orcamento.Valor * 0.06;
     }
 }

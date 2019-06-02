@@ -1,41 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Windows.Forms;
 
 namespace Builder.BuilderNotaFiscal
 {
     public class NotaFiscal
     {
-        public NotaFiscal(string razaoSocial, string cnpj, double valorBruto, double impostos, DateTime dataDeEmissao, string observacoes, IList<ItemDaNota> itens)
+        public NotaFiscal(string razaoSocial, string cnpj, double valorBruto, double impostos, DateTime dataDeEmissao,
+            string observacoes, IList<ItemDaNota> itens)
         {
-            this.RazaoSocial = razaoSocial;
-            this.Cnpj = cnpj;
-            this.ValorBruto = valorBruto;
-            this.Impostos = impostos;
-            this.DataDeEmissao = dataDeEmissao;
-            this.Obstervacoes = observacoes;
-            this.Itens = itens;
+            RazaoSocial = razaoSocial;
+            Cnpj = cnpj;
+            ValorBruto = valorBruto;
+            Impostos = impostos;
+            DataDeEmissao = dataDeEmissao;
+            Observacoes = observacoes;
+            Itens = itens;
         }
 
-        public string Cnpj { get; private set; }
-        public DateTime DataDeEmissao { get; private set; }
-        public double Impostos { get; private set; }
-        public IList<ItemDaNota> Itens { get; private set; }
-        public string Obstervacoes { get; private set; }
-        public string RazaoSocial { get; private set; }
-        public double ValorBruto { get; private set; }
+        private string Cnpj { get; }
+        private DateTime DataDeEmissao { get; }
+        private double Impostos { get; }
+        private IList<ItemDaNota> Itens { get; }
+        private string Observacoes { get; }
+        private string RazaoSocial { get; }
+        private double ValorBruto { get; }
 
         public void Imprime()
         {
-            Console.WriteLine(RazaoSocial);
-            Console.WriteLine(Cnpj);
+            var impressao = new StringBuilder()
+                .Append($"Razão Social: {RazaoSocial}                                       {Environment.NewLine}")
+                .Append($"CNPJ: {Cnpj}                                                      {Environment.NewLine}");
+
             foreach (var item in Itens)
-            {
-                Console.WriteLine("{0} - {1}", item.Nome, item.Valor);
-            }
-            Console.WriteLine(ValorBruto);
-            Console.WriteLine(Impostos);
-            Console.WriteLine(DataDeEmissao.ToString("dd/MM/yyyy"));
-            Console.WriteLine(Obstervacoes);
+                impressao.Append($"Item: {item.Nome} - Valor: {item.Valor}                  {Environment.NewLine}");
+
+            var str = impressao
+                .Append($"Valor Bruto: {ValorBruto}                                         {Environment.NewLine}")
+                .Append($"Impostos: {Impostos}                                              {Environment.NewLine}")
+                .Append($"Data de emisssão {DataDeEmissao:dd/MM/yyyy}                       {Environment.NewLine}")
+                .Append($"Observações {Observacoes}                                         {Environment.NewLine}")
+                .ToString();
+
+            MessageBox.Show(str);
         }
     }
 }

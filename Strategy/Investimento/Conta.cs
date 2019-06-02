@@ -1,10 +1,10 @@
-﻿namespace Strategy
+﻿namespace Strategy.Investimento
 {
     public class Conta
     {
         public Conta(double saldo)
         {
-            this.Saldo = saldo;
+            Saldo = saldo;
         }
 
         public double Saldo { get; set; }

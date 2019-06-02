@@ -1,13 +1,14 @@
-﻿using System;
+﻿using System.Globalization;
+using System.Windows.Forms;
 
-namespace Strategy
+namespace Strategy.Imposto
 {
-    internal class CalculadorDeImposto
+    internal static class CalculadorDeImposto
     {
-        public void RealizaCalculo(Orcamento orcamento, Imposto imposto)
+        internal static void RealizaCalculo(Orcamento orcamento, IImposto imposto)
         {
-            double valor = imposto.Calcula(orcamento);
-            Console.WriteLine(valor);
+            var valor = imposto.Calcula(orcamento);
+            MessageBox.Show($"Valor do imposto calculado: {valor.ToString(CultureInfo.InvariantCulture)}");
         }
     }
 }

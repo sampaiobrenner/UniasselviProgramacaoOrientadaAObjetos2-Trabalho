@@ -1,14 +1,14 @@
-﻿namespace ChainOfResponsibility
+﻿namespace ChainOfResponsibility.Requisicao
 {
     public class Conta
     {
         public Conta(string titular, double saldo)
         {
-            this.Saldo = saldo;
-            this.Titular = titular;
+            Saldo = saldo;
+            Titular = titular;
         }
 
-        public double Saldo { get; set; }
-        public string Titular { get; set; }
+        public double Saldo { get; }
+        public string Titular { get; }
     }
 }

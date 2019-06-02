@@ -6,7 +6,7 @@
         {
         }
 
-        public ISS() : base()
+        public ISS()
         {
         }
 

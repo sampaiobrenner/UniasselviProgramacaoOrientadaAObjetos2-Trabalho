@@ -1,6 +1,6 @@
-﻿using Observer.ObserverNotaFiscal;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Observer.ObserverNotaFiscal;
 
 namespace Observer
 {
@@ -13,7 +13,7 @@ namespace Observer
 
         private static void Observer()
         {
-            ItemDaNotaBuilder itemBuilder = new ItemDaNotaBuilder();
+            var itemBuilder = new ItemDaNotaBuilder();
             itemBuilder
                 .ComNome("item1")
                 .ComValor(100);
@@ -27,13 +27,13 @@ namespace Observer
                 .ComValor(200);
             var item3 = itemBuilder.Constroi();
 
-            List<IAcoesDaNotaFiscal> acoes = new List<IAcoesDaNotaFiscal>();
+            var acoes = new List<IAcoesDaNotaFiscal>();
 
             acoes.Add(new EnviadorDeEmail());
             acoes.Add(new NotaFiscalDao());
             acoes.Add(new Multiplicador(2));
 
-            NotaFiscalBuilder builder = new NotaFiscalBuilder(acoes);
+            var builder = new NotaFiscalBuilder(acoes);
             builder
                 .ComRazaoSocial("Filomeno Advogados")
                 .ComCnpj("24.093.094/0001.59")
@@ -45,7 +45,7 @@ namespace Observer
             //.ComAcao(new NotaFiscalDao())
             //.ComAcao(new Multiplicador(2));
 
-            NotaFiscal nota = builder.Constroi();
+            var nota = builder.Constroi();
 
             nota.Imprime();
 

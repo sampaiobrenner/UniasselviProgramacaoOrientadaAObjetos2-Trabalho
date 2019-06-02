@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace State
+namespace State.State_de_Orcamento
 {
     public class Reprovado : IEstadoDoOrcamento
     {
