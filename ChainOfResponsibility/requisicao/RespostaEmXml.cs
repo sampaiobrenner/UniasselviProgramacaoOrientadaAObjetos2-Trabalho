@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using System.Windows.Forms;
 
 namespace ChainOfResponsibility.Requisicao
@@ -21,18 +22,18 @@ namespace ChainOfResponsibility.Requisicao
         {
             if (requisicao.Formato == Formato.Xml)
             {
-                var xml = new StringBuilder();
+                var xml = new StringBuilder()
+                    .Append($"<conta>                           {Environment.NewLine}")
+                    .Append($"   <titular>                      {Environment.NewLine}")
+                    .Append($"         {conta.Titular }         {Environment.NewLine}")
+                    .Append($"   </titular>                     {Environment.NewLine}")
+                    .Append($"   <saldo>                        {Environment.NewLine}")
+                    .Append($"         {conta.Saldo}            {Environment.NewLine}")
+                    .Append($"   </saldo>                       {Environment.NewLine}")
+                    .Append($"</conta>                          {Environment.NewLine}")
+                    .ToString();
 
-                xml.Append("<conta>");
-                xml.Append("   <titular>");
-                xml.Append("      " + conta.Titular);
-                xml.Append("   </titular>");
-                xml.Append("   <saldo>");
-                xml.Append("      " + conta.Saldo);
-                xml.Append("   </saldo>");
-                xml.Append("</conta>");
-
-                MessageBox.Show(xml.ToString());
+                MessageBox.Show(xml);
                 return;
             }
 

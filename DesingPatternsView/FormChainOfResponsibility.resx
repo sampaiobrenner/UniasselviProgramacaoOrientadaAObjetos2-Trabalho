@@ -117,7 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox4.Text" xml:space="preserve">
-    <value>Com o padrão strategy, quando houver algum tipo de mudança no formato do calculo fiscal, não precisamos fazer nenhuma alteração na classe NotaFiscal, é só criarmos uma nova classe, implementar a interface IImposto e na variável imposto, da classe NotaFiscal passar a nova classe, que a NotaFiscal fará o calculo da mesma.</value>
-  </data>
 </root>

@@ -111,5 +111,8 @@
   <ItemGroup>
     <None Include="Resources\estrutura_strategy.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrutura_chain.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -25,7 +25,7 @@ namespace ChainOfResponsibility
         {
             var conta = new Conta("Rodrigo", 590);
 
-            var req = new Requisicao.Requisicao(Formato.Csv);
+            var req = new Requisicao.Requisicao(Formato.Xml);
 
             DeterminadorDeResposta.Executa(req, conta);
         }
