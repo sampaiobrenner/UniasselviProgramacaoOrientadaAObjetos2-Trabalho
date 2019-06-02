@@ -37,6 +37,8 @@
             this.btnObserver = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.linkGithub = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnStrategy
@@ -143,11 +145,33 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Desenvolvido por Matheus Brenner";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(80, 305);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Disponível no GitHub:";
+            // 
+            // linkGithub
+            // 
+            this.linkGithub.AutoSize = true;
+            this.linkGithub.Location = new System.Drawing.Point(193, 305);
+            this.linkGithub.Name = "linkGithub";
+            this.linkGithub.Size = new System.Drawing.Size(113, 13);
+            this.linkGithub.TabIndex = 10;
+            this.linkGithub.TabStop = true;
+            this.linkGithub.Text = "https://bit.ly/2wwgIxH";
+            this.linkGithub.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkGithub_LinkClicked);
+            // 
             // FormExemplos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 307);
+            this.ClientSize = new System.Drawing.Size(363, 336);
+            this.Controls.Add(this.linkGithub);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnObserver);
@@ -179,5 +203,7 @@
         private System.Windows.Forms.Button btnObserver;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel linkGithub;
     }
 }

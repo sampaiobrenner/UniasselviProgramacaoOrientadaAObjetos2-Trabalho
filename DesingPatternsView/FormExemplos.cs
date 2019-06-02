@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace DesingPatternsView
@@ -50,6 +51,11 @@ namespace DesingPatternsView
         private void BtnTemplateMehod_Click(object sender, EventArgs e)
         {
             AbrirTela(new FormTemplateMethod());
+        }
+
+        private void LinkGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://bit.ly/2wwgIxH");
         }
     }
 }

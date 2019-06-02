@@ -1,27 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace Decorator.banco
 {
     public class RelatorioSimples : TemplateRelatorio
     {
-        protected override void Cabecalho()
+        protected override string Cabecalho()
         {
-            Console.WriteLine("Banco XYZ");
-            Console.WriteLine("----------------------------------");
+            return new StringBuilder()
+                .Append($"Banco XYZ                             {Environment.NewLine}")
+                .Append($"----------------------------------    {Environment.NewLine}")
+                .ToString();
         }
 
-        protected override void Corpo(IEnumerable<Conta> contas)
+        protected override string Corpo(IEnumerable<Conta> contas)
         {
-            foreach (var c in contas) Console.WriteLine(c.Titutar + " - " + c.Saldo);
+            var str = new StringBuilder();
+
+            foreach (var c in contas)
+                str.Append($"{c.Titutar} - {c.Saldo}            {Environment.NewLine}");
+
+            return str.ToString();
         }
 
-        protected override void Rodape()
+        protected override string Rodape()
         {
-            Console.WriteLine("----------------------------------");
-
-            Console.WriteLine("(21) 1234-5678");
-            ;
+            return new StringBuilder()
+                .Append($"----------------------------------    {Environment.NewLine}")
+                .Append($"(21) 1234-5678                        {Environment.NewLine}")
+                .ToString();
         }
     }
 }
