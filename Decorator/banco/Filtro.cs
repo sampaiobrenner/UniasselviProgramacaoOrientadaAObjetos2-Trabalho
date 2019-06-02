@@ -4,26 +4,24 @@ namespace Decorator.banco
 {
     public abstract class Filtro
     {
-        public List<Conta> ContasFiltradas = new List<Conta>();
+        protected readonly List<Conta> ContasFiltradas;
 
-        public Filtro(Filtro outroFiltro)
+        protected Filtro(Filtro outroFiltro)
         {
             OutroFiltro = outroFiltro;
+            ContasFiltradas = new List<Conta>();
         }
 
-        public Filtro()
+        protected Filtro()
         {
             OutroFiltro = null;
+            ContasFiltradas = new List<Conta>();
         }
 
-        public Filtro OutroFiltro { get; set; }
+        private Filtro OutroFiltro { get; }
 
         public abstract IList<Conta> Filtra(IList<Conta> contas);
 
-        protected IList<Conta> Proximo(IList<Conta> contas)
-        {
-            if (OutroFiltro != null) return OutroFiltro.Filtra(contas);
-            return new List<Conta>();
-        }
+        protected IEnumerable<Conta> Proximo(IList<Conta> contas) => OutroFiltro != null ? OutroFiltro.Filtra(contas) : new List<Conta>();
     }
 }

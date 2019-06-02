@@ -2,13 +2,13 @@
 
 namespace Decorator.banco
 {
-    public class FiltroSaldoMaior500k : Filtro
+    public class FiltroSaldoMaior500K : Filtro
     {
-        public FiltroSaldoMaior500k(Filtro outroFiltro) : base(outroFiltro)
+        public FiltroSaldoMaior500K(Filtro outroFiltro) : base(outroFiltro)
         {
         }
 
-        public FiltroSaldoMaior500k()
+        public FiltroSaldoMaior500K()
         {
         }
 
@@ -17,7 +17,10 @@ namespace Decorator.banco
             foreach (var conta in contas)
                 if (conta.Saldo > 500000)
                     ContasFiltradas.Add(conta);
-            foreach (var conta in Proximo(contas)) ContasFiltradas.Add(conta);
+
+            foreach (var conta in Proximo(contas))
+                ContasFiltradas.Add(conta);
+
             return ContasFiltradas;
         }
     }
