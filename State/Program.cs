@@ -1,4 +1,6 @@
 ﻿using System;
+using State.State_de_Conta;
+using State.State_de_Orcamento;
 
 namespace State
 {
@@ -13,7 +15,7 @@ namespace State
 
         private static void StateDeConta()
         {
-            Conta conta = new Conta(500);
+            var conta = new Conta(500);
 
             Console.WriteLine(conta.Saldo);
             conta.Saca(600);
@@ -28,7 +30,7 @@ namespace State
 
         private static void StateDeOrcamento()
         {
-            Orcamento reforma = new Orcamento(500);
+            var reforma = new Orcamento(500);
 
             Console.WriteLine(reforma.Valor);
             reforma.AplicaDescontoExtra();

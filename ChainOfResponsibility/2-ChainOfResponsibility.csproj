@@ -5,12 +5,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E991DB37-456F-4D17-8D54-0BDDFBB76A41}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>ChainOfResponsibility</RootNamespace>
     <AssemblyName>ChainOfResponsibility</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,9 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,24 +47,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="requisicao\Conta.cs" />
-    <Compile Include="desconto\CalculadorDeDescontos.cs" />
-    <Compile Include="desconto\DescontoPorVendaCasada.cs" />
-    <Compile Include="desconto\DescontoMaisDe500.cs" />
-    <Compile Include="desconto\IDesconto.cs" />
-    <Compile Include="desconto\DescontoMais5Itens.cs" />
-    <Compile Include="desconto\Item.cs" />
-    <Compile Include="desconto\Orcamento.cs" />
-    <Compile Include="requisicao\DeterminadorDeResposta.cs" />
-    <Compile Include="requisicao\Formato.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Requisicao\Conta.cs" />
+    <Compile Include="Desconto\CalculadorDeDescontos.cs" />
+    <Compile Include="Desconto\DescontoPorVendaCasada.cs" />
+    <Compile Include="Desconto\DescontoMaisDe500.cs" />
+    <Compile Include="Desconto\IDesconto.cs" />
+    <Compile Include="Desconto\DescontoMais5Itens.cs" />
+    <Compile Include="Desconto\Item.cs" />
+    <Compile Include="Desconto\Orcamento.cs" />
+    <Compile Include="Requisicao\DeterminadorDeResposta.cs" />
+    <Compile Include="Requisicao\Formato.cs" />
+    <Compile Include="ExemplosChain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="desconto\SemDesconto.cs" />
-    <Compile Include="requisicao\Requisicao.cs" />
-    <Compile Include="requisicao\IResposta.cs" />
-    <Compile Include="requisicao\RespostaEmCsv.cs" />
-    <Compile Include="requisicao\RespostaEmPorcentagem.cs" />
-    <Compile Include="requisicao\RespostaEmXml.cs" />
+    <Compile Include="Desconto\SemDesconto.cs" />
+    <Compile Include="Requisicao\Requisicao.cs" />
+    <Compile Include="Requisicao\IResposta.cs" />
+    <Compile Include="Requisicao\RespostaEmCsv.cs" />
+    <Compile Include="Requisicao\RespostaEmPorcentagem.cs" />
+    <Compile Include="Requisicao\RespostaEmXml.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

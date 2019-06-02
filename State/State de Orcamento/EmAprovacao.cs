@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace State
+namespace State.State_de_Orcamento
 {
     public class EmAprovacao : IEstadoDoOrcamento
     {
-        private bool descontoAplicado = false;
+        private bool descontoAplicado;
 
         public void AplicaDescontoExtra(Orcamento orcamento)
         {

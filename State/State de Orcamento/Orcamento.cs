@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace State
+namespace State.State_de_Orcamento
 {
     public class Orcamento
     {
@@ -18,7 +18,7 @@ namespace State
         public void AdicionaItem(Item item)
         {
             Itens.Add(item);
-            this.Valor += item.Valor;
+            Valor += item.Valor;
         }
 
         public void AplicaDescontoExtra()

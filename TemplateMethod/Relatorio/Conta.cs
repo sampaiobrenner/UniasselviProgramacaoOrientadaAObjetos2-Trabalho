@@ -4,10 +4,10 @@
     {
         public Conta(string titular, int agencia, int numerodaconta, double saldo)
         {
-            this.Titutar = titular;
-            this.Agencia = agencia;
-            this.NumeroDaConta = numerodaconta;
-            this.Saldo = saldo;
+            Titutar = titular;
+            Agencia = agencia;
+            NumeroDaConta = numerodaconta;
+            Saldo = saldo;
         }
 
         public int Agencia { get; set; }

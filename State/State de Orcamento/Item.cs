@@ -1,11 +1,11 @@
-﻿namespace State
+﻿namespace State.State_de_Orcamento
 {
     public class Item
     {
         public Item(string nome, double valor)
         {
-            this.Nome = nome;
-            this.Valor = valor;
+            Nome = nome;
+            Valor = valor;
         }
 
         public string Nome { get; set; }

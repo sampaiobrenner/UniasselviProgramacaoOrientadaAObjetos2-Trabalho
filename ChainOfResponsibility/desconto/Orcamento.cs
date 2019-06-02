@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
 
-namespace ChainOfResponsibility
+namespace ChainOfResponsibility.Desconto
 {
     public class Orcamento
     {
-        public List<Item> Itens = new List<Item>();
+        public readonly List<Item> Itens;
 
-        public Orcamento(double Valor)
+        public Orcamento(double valor)
         {
-            this.Valor = Valor;
+            Valor = valor;
+            Itens = new List<Item>();
         }
 
         public double Valor { get; private set; }
@@ -16,7 +17,7 @@ namespace ChainOfResponsibility
         public void AdicionaItem(Item item)
         {
             Itens.Add(item);
-            this.Valor += item.Valor;
+            Valor += item.Valor;
         }
     }
 }

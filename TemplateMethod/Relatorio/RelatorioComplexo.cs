@@ -14,10 +14,8 @@ namespace TemplateMethod.Relatorio
 
         public override void Corpo(IList<Conta> contas)
         {
-            foreach (Conta c in contas)
-            {
+            foreach (var c in contas)
                 Console.WriteLine(c.Titutar + " - " + c.Agencia + " - " + c.NumeroDaConta + " - " + c.Saldo);
-            }
         }
 
         public override void Rodape()

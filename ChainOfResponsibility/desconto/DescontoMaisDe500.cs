@@ -1,4 +1,4 @@
-﻿namespace ChainOfResponsibility
+﻿namespace ChainOfResponsibility.Desconto
 {
     public class DescontoMaisDe500 : IDesconto
     {
@@ -7,9 +7,8 @@
         public double Calcula(Orcamento orcamento)
         {
             if (orcamento.Valor > 500)
-            {
                 return orcamento.Valor * 0.07;
-            }
+
             return Proximo.Calcula(orcamento);
         }
     }

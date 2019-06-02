@@ -1,5 +1,5 @@
-﻿using Builder.BuilderNotaFiscal;
-using System;
+﻿using System;
+using Builder.BuilderNotaFiscal;
 
 namespace Builder
 {
@@ -7,7 +7,7 @@ namespace Builder
     {
         private static void Builder()
         {
-            ItemDaNotaBuilder itemBuilder = new ItemDaNotaBuilder();
+            var itemBuilder = new ItemDaNotaBuilder();
             itemBuilder
                 .ComNome("item1")
                 .ComValor(100);
@@ -21,7 +21,7 @@ namespace Builder
                 .ComValor(200);
             var item3 = itemBuilder.Constroi();
 
-            NotaFiscalBuilder builder = new NotaFiscalBuilder();
+            var builder = new NotaFiscalBuilder();
             builder
                 .ComRazaoSocial("Filomeno Advogados")
                 .ComCnpj("24.093.094/0001.59")
@@ -30,7 +30,7 @@ namespace Builder
                 .Com(item3)
                 .ComObservacoes("uma observacao qualquer");
 
-            NotaFiscal nota = builder.Constroi();
+            var nota = builder.Constroi();
 
             nota.Imprime();
 

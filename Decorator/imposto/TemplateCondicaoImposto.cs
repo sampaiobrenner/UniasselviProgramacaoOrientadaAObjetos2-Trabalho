@@ -6,16 +6,13 @@
         {
         }
 
-        public TemplateCondicaoImposto() : base()
+        public TemplateCondicaoImposto()
         {
         }
 
         public override double Calcula(Orcamento orcamento)
         {
-            if (CondicaoMaiorImposto(orcamento))
-            {
-                return MaiorImposto(orcamento) + CalculoDoOutroImposto(orcamento);
-            }
+            if (CondicaoMaiorImposto(orcamento)) return MaiorImposto(orcamento) + CalculoDoOutroImposto(orcamento);
 
             return MenorImposto(orcamento) + CalculoDoOutroImposto(orcamento);
         }

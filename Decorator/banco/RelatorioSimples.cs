@@ -13,17 +13,15 @@ namespace Decorator.banco
 
         public override void Corpo(IList<Conta> contas)
         {
-            foreach (Conta c in contas)
-            {
-                Console.WriteLine(c.Titutar + " - " + c.Saldo);
-            }
+            foreach (var c in contas) Console.WriteLine(c.Titutar + " - " + c.Saldo);
         }
 
         public override void Rodape()
         {
             Console.WriteLine("----------------------------------");
 
-            Console.WriteLine("(21) 1234-5678"); ;
+            Console.WriteLine("(21) 1234-5678");
+            ;
         }
     }
 }

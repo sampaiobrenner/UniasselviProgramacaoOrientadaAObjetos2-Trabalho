@@ -6,7 +6,7 @@ namespace Observer.ObserverNotaFiscal
     {
         public Multiplicador(double num)
         {
-            this.Num = num;
+            Num = num;
         }
 
         public double Num { get; set; }

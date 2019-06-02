@@ -1,31 +1,30 @@
-﻿using System;
+﻿using System.Windows.Forms;
 
-namespace ChainOfResponsibility
+namespace ChainOfResponsibility.Requisicao
 {
     public class RespostaEmCsv : IResposta
     {
         public RespostaEmCsv(IResposta proximo)
         {
-            this.Proximo = proximo;
+            Proximo = proximo;
         }
 
         public RespostaEmCsv()
         {
-            this.Proximo = null;
+            Proximo = null;
         }
 
         public IResposta Proximo { get; set; }
 
         public void Responde(Requisicao requisicao, Conta conta)
         {
-            if (requisicao.Formato == Formato.CSV)
+            if (requisicao.Formato == Formato.Csv)
             {
-                Console.WriteLine(conta.Titular + ";" + conta.Saldo);
+                MessageBox.Show($"{conta.Titular};{conta.Saldo}");
+                return;
             }
-            else
-            {
-                Proximo.Responde(requisicao, conta);
-            }
+
+            Proximo.Responde(requisicao, conta);
         }
     }
 }

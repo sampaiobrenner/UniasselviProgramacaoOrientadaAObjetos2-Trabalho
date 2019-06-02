@@ -1,4 +1,4 @@
-﻿namespace State
+﻿namespace State.State_de_Orcamento
 {
     public interface IEstadoDoOrcamento
     {

@@ -7,13 +7,13 @@
 
         public ItemDaNotaBuilder ComNome(string nome)
         {
-            this.Nome = nome;
+            Nome = nome;
             return this;
         }
 
         public ItemDaNotaBuilder ComValor(double valor)
         {
-            this.Valor = valor;
+            Valor = valor;
             return this;
         }
 

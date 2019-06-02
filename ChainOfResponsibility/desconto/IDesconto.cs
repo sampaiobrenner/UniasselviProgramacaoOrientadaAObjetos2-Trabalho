@@ -1,4 +1,4 @@
-﻿namespace ChainOfResponsibility
+﻿namespace ChainOfResponsibility.Desconto
 {
     public interface IDesconto
     {

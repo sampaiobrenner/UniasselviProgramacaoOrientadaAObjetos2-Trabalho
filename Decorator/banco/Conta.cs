@@ -6,11 +6,11 @@ namespace Decorator.banco
     {
         public Conta(string titular, int agencia, int numerodaconta, double saldo, DateTime dataDeAbertura)
         {
-            this.Titutar = titular;
-            this.Agencia = agencia;
-            this.NumeroDaConta = numerodaconta;
-            this.Saldo = saldo;
-            this.DataDeAbertura = dataDeAbertura;
+            Titutar = titular;
+            Agencia = agencia;
+            NumeroDaConta = numerodaconta;
+            Saldo = saldo;
+            DataDeAbertura = dataDeAbertura;
         }
 
         public int Agencia { get; set; }

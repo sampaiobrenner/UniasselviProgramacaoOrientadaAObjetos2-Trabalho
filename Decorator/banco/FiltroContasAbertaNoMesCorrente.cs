@@ -9,23 +9,16 @@ namespace Decorator.banco
         {
         }
 
-        public FiltroContasAbertaNoMesCorrente() : base()
+        public FiltroContasAbertaNoMesCorrente()
         {
         }
 
         public override IList<Conta> Filtra(IList<Conta> contas)
         {
             foreach (var conta in contas)
-            {
                 if (conta.DataDeAbertura.Month == DateTime.Now.Month && conta.DataDeAbertura.Year == DateTime.Now.Year)
-                {
                     ContasFiltradas.Add(conta);
-                }
-            }
-            foreach (Conta conta in Proximo(contas))
-            {
-                ContasFiltradas.Add(conta);
-            }
+            foreach (var conta in Proximo(contas)) ContasFiltradas.Add(conta);
             return ContasFiltradas;
         }
     }

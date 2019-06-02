@@ -10,7 +10,7 @@ namespace Observer.ObserverNotaFiscal
 
         public NotaFiscalBuilder(IList<IAcoesDaNotaFiscal> acoes)
         {
-            this.Acoes = acoes;
+            Acoes = acoes;
             DataDeEmissao = DateTime.Now;
         }
 
@@ -23,27 +23,27 @@ namespace Observer.ObserverNotaFiscal
 
         public NotaFiscalBuilder Com(ItemDaNota item)
         {
-            this.Itens.Add(item);
-            this.ValorBruto += item.Valor;
-            this.Impostos = ValorBruto * 0.05;
+            Itens.Add(item);
+            ValorBruto += item.Valor;
+            Impostos = ValorBruto * 0.05;
             return this;
         }
 
         public NotaFiscalBuilder ComCnpj(string cnpj)
         {
-            this.Cnpj = cnpj;
+            Cnpj = cnpj;
             return this;
         }
 
         public NotaFiscalBuilder ComObservacoes(string observacoes)
         {
-            this.Obstervacoes = observacoes;
+            Obstervacoes = observacoes;
             return this;
         }
 
         public NotaFiscalBuilder ComRazaoSocial(string razaoSocial)
         {
-            this.RazaoSocial = razaoSocial;
+            RazaoSocial = razaoSocial;
             return this;
         }
 
@@ -54,18 +54,15 @@ namespace Observer.ObserverNotaFiscal
         //}
         public NotaFiscal Constroi()
         {
-            NotaFiscal nota = new NotaFiscal(RazaoSocial, Cnpj, ValorBruto, Impostos, DataDeEmissao, Obstervacoes, Itens);
-            foreach (var acao in Acoes)
-            {
-                acao.Executa(nota);
-            }
+            var nota = new NotaFiscal(RazaoSocial, Cnpj, ValorBruto, Impostos, DataDeEmissao, Obstervacoes, Itens);
+            foreach (var acao in Acoes) acao.Executa(nota);
 
             return nota;
         }
 
         public NotaFiscalBuilder NaData(DateTime novaData)
         {
-            this.DataDeEmissao = novaData;
+            DataDeEmissao = novaData;
             return this;
         }
     }

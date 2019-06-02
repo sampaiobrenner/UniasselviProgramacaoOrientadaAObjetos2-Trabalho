@@ -1,31 +1,30 @@
-﻿using System;
+﻿using System.Windows.Forms;
 
-namespace ChainOfResponsibility
+namespace ChainOfResponsibility.Requisicao
 {
     public class RespostaEmPorcentagem : IResposta
     {
         public RespostaEmPorcentagem(IResposta proximo)
         {
-            this.Proximo = proximo;
+            Proximo = proximo;
         }
 
         public RespostaEmPorcentagem()
         {
-            this.Proximo = null;
+            Proximo = null;
         }
 
         public IResposta Proximo { get; set; }
 
         public void Responde(Requisicao requisicao, Conta conta)
         {
-            if (requisicao.Formato == Formato.PORCENTO)
+            if (requisicao.Formato == Formato.Porcento)
             {
-                Console.WriteLine(conta.Titular + "%" + conta.Saldo);
+                MessageBox.Show(conta.Titular + "%" + conta.Saldo);
+                return;
             }
-            else
-            {
-                Proximo.Responde(requisicao, conta);
-            }
+
+            Proximo.Responde(requisicao, conta);
         }
     }
 }

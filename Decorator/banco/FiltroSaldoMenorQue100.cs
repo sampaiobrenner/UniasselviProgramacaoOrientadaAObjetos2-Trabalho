@@ -8,23 +8,16 @@ namespace Decorator.banco
         {
         }
 
-        public FiltroSaldoMenorQue100() : base()
+        public FiltroSaldoMenorQue100()
         {
         }
 
         public override IList<Conta> Filtra(IList<Conta> contas)
         {
             foreach (var conta in contas)
-            {
                 if (conta.Saldo < 100)
-                {
                     ContasFiltradas.Add(conta);
-                }
-            }
-            foreach (Conta conta in Proximo(contas))
-            {
-                ContasFiltradas.Add(conta);
-            }
+            foreach (var conta in Proximo(contas)) ContasFiltradas.Add(conta);
             return ContasFiltradas;
         }
     }

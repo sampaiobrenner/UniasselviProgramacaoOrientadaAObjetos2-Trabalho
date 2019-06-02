@@ -8,12 +8,12 @@ namespace Decorator.banco
 
         public Filtro(Filtro outroFiltro)
         {
-            this.OutroFiltro = outroFiltro;
+            OutroFiltro = outroFiltro;
         }
 
         public Filtro()
         {
-            this.OutroFiltro = null;
+            OutroFiltro = null;
         }
 
         public Filtro OutroFiltro { get; set; }
@@ -23,7 +23,7 @@ namespace Decorator.banco
         protected IList<Conta> Proximo(IList<Conta> contas)
         {
             if (OutroFiltro != null) return OutroFiltro.Filtra(contas);
-            else return new List<Conta>();
+            return new List<Conta>();
         }
     }
 }
