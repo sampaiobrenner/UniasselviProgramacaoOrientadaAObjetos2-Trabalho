@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Decorator.banco
+namespace Decorator.Banco
 {
     public abstract class Filtro
     {

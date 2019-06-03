@@ -1,18 +1,13 @@
-﻿namespace TemplateMethod.imposto
+﻿namespace TemplateMethod.Imposto
 {
-    public abstract class TemplateCondicaoImposto : Imposto
+    public abstract class TemplateCondicaoImposto : IImposto
     {
-        public double Calcula(Orcamento orcamento)
-        {
-            if (CondicaoMaiorImposto(orcamento)) return MaiorImposto(orcamento);
+        public double Calcula(Orcamento orcamento) => CondicaoMaiorImposto(orcamento) ? MaiorImposto(orcamento) : MenorImposto(orcamento);
 
-            return MenorImposto(orcamento);
-        }
+        protected abstract bool CondicaoMaiorImposto(Orcamento orcamento);
 
-        public abstract bool CondicaoMaiorImposto(Orcamento orcamento);
+        protected abstract double MaiorImposto(Orcamento orcamento);
 
-        public abstract double MaiorImposto(Orcamento orcamento);
-
-        public abstract double MenorImposto(Orcamento orcamento);
+        protected abstract double MenorImposto(Orcamento orcamento);
     }
 }

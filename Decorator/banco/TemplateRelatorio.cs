@@ -2,7 +2,7 @@
 using System.Text;
 using System.Windows.Forms;
 
-namespace Decorator.banco
+namespace Decorator.Banco
 {
     public abstract class TemplateRelatorio
     {

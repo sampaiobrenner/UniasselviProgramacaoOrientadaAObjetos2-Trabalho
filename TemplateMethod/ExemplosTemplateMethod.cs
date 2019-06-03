@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using TemplateMethod.imposto;
+﻿using System.Collections.Generic;
+using TemplateMethod.Imposto;
 using TemplateMethod.Relatorio;
 
 namespace TemplateMethod
 {
-    internal class Program
+    public static class ExemplosTemplateMethod
     {
-        private static void Imposto()
+        public static void Imposto()
         {
             var orcamento = new Orcamento(0);
             orcamento.AdicionaItem(new Item("Caneta", 20));
@@ -16,24 +15,20 @@ namespace TemplateMethod
             orcamento.AdicionaItem(new Item("Liquid Paper", 20));
             orcamento.AdicionaItem(new Item("Xbox", 420));
 
-            Imposto ICPP = new ICPP();
-            Imposto IKCV = new IKCV();
-            Imposto IHIT = new IHIT();
+            IImposto icpp = new ICPP();
+            IImposto ikcv = new IKCV();
+            IImposto ihit = new IHIT();
 
             var calculador = new CalculadorDeImposto();
 
-            calculador.RealizaCalculo(orcamento, IHIT);
+            calculador.RealizaCalculo(orcamento, ihit);
 
             orcamento.AdicionaItem(new Item("Caneta", 20));
-            calculador.RealizaCalculo(orcamento, IHIT);
-
-            Console.ReadKey();
+            calculador.RealizaCalculo(orcamento, ihit);
         }
 
-        private static void Main(string[] args)
+        public static void Relatorio()
         {
-            // Imposto();
-
             IList<Conta> contas = new List<Conta>();
 
             var conta1 = new Conta("Rodrigo", 1234, 789456123, 500);
@@ -48,9 +43,7 @@ namespace TemplateMethod
             TemplateRelatorio relatorio2 = new RelatorioComplexo();
 
             relatorio1.Imprime(contas);
-            Console.WriteLine("---------------------------------------------");
             relatorio2.Imprime(contas);
-            Console.ReadKey();
         }
     }
 }

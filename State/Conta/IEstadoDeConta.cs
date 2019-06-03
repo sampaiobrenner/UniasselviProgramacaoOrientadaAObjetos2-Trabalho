@@ -1,4 +1,4 @@
-﻿namespace State.State_de_Conta
+﻿namespace State.Conta
 {
     //public interface IEstadoDeConta
     //{

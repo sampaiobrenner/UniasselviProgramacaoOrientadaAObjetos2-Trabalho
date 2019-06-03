@@ -38,6 +38,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,16 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="imposto\CalculadorDeImposto.cs" />
-    <Compile Include="imposto\ICPP.cs" />
-    <Compile Include="imposto\IHIT.cs" />
-    <Compile Include="imposto\IKCV.cs" />
-    <Compile Include="imposto\Imposto.cs" />
-    <Compile Include="imposto\Item.cs" />
-    <Compile Include="imposto\Orcamento.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Imposto\CalculadorDeImposto.cs" />
+    <Compile Include="Imposto\ICPP.cs" />
+    <Compile Include="Imposto\IHIT.cs" />
+    <Compile Include="Imposto\IKCV.cs" />
+    <Compile Include="Imposto\IImposto.cs" />
+    <Compile Include="Imposto\Item.cs" />
+    <Compile Include="Imposto\Orcamento.cs" />
+    <Compile Include="ExemplosTemplateMethod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="imposto\TemplateCondicaoImposto.cs" />
+    <Compile Include="Imposto\TemplateCondicaoImposto.cs" />
     <Compile Include="Relatorio\Conta.cs" />
     <Compile Include="Relatorio\RelatorioComplexo.cs" />
     <Compile Include="Relatorio\RelatorioSimples.cs" />

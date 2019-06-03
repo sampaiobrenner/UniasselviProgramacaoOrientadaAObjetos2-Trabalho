@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Decorator.banco
+namespace Decorator.Banco
 {
     public class Conta
     {

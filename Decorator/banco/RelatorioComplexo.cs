@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Decorator.banco
+namespace Decorator.Banco
 {
     public class RelatorioComplexo : TemplateRelatorio
     {
