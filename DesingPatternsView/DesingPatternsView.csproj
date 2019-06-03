@@ -165,9 +165,21 @@
       <Project>{0C0C64C7-5AF6-4F82-B373-DF12910F3DBD}</Project>
       <Name>4-Decorator</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Observer\7-Observer.csproj">
+      <Project>{7a6f069c-078e-4abc-948c-6a2905249a86}</Project>
+      <Name>7-Observer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\State\5-State.csproj">
+      <Project>{0ea9e2a0-eb6c-43c7-8ea2-525fac50164b}</Project>
+      <Name>5-State</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Strategy\1-Strategy.csproj">
       <Project>{DAD3D4CF-ACB9-4C8B-BD10-DDCBD5490DB3}</Project>
       <Name>1-Strategy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TemplateMethod\3-TemplateMethod.csproj">
+      <Project>{c9d61224-6143-4ed0-af38-eec838410ad9}</Project>
+      <Name>3-TemplateMethod</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
