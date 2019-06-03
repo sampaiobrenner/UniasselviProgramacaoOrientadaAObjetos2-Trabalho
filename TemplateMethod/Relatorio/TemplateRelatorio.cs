@@ -1,20 +1,26 @@
 ﻿using System.Collections.Generic;
+using System.Text;
+using System.Windows.Forms;
 
 namespace TemplateMethod.Relatorio
 {
     public abstract class TemplateRelatorio
     {
-        public abstract void Cabecalho();
-
-        public abstract void Corpo(IList<Conta> contas);
-
-        public void Imprime(IList<Conta> contas)
+        public void Imprime(IEnumerable<Conta> contas)
         {
-            Cabecalho();
-            Corpo(contas);
-            Rodape();
+            var str = new StringBuilder()
+                .Append(Cabecalho())
+                .Append(Corpo(contas))
+                .Append(Rodape())
+                .ToString();
+
+            MessageBox.Show(str);
         }
 
-        public abstract void Rodape();
+        protected abstract string Cabecalho();
+
+        protected abstract string Corpo(IEnumerable<Conta> contas);
+
+        protected abstract string Rodape();
     }
 }

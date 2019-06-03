@@ -1,6 +1,6 @@
 ﻿namespace TemplateMethod.Imposto
 {
-    public class IKCV : Imposto
+    public class IKCV : IImposto
     {
         public double Calcula(Orcamento orcamento)
         {

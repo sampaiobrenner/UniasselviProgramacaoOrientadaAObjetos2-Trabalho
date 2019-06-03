@@ -40,8 +40,10 @@
             this.txtAplicacao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnNotaFiscal = new System.Windows.Forms.Button();
+            this.btnImposto = new System.Windows.Forms.Button();
             this.btnDiagrama = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnRelatorio = new System.Windows.Forms.Button();
             this.panelDiagrama.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +71,7 @@
             this.linkFecharDiagrama.TabIndex = 4;
             this.linkFecharDiagrama.TabStop = true;
             this.linkFecharDiagrama.Text = "Fechar";
+            this.linkFecharDiagrama.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkFecharDiagrama_LinkClicked);
             // 
             // label5
             // 
@@ -177,16 +180,17 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Categoria:";
             // 
-            // btnNotaFiscal
+            // btnImposto
             // 
-            this.btnNotaFiscal.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotaFiscal.Location = new System.Drawing.Point(36, 205);
-            this.btnNotaFiscal.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNotaFiscal.Name = "btnNotaFiscal";
-            this.btnNotaFiscal.Size = new System.Drawing.Size(212, 52);
-            this.btnNotaFiscal.TabIndex = 24;
-            this.btnNotaFiscal.Text = "Executar exemplo nota fiscal";
-            this.btnNotaFiscal.UseVisualStyleBackColor = true;
+            this.btnImposto.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImposto.Location = new System.Drawing.Point(36, 205);
+            this.btnImposto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImposto.Name = "btnImposto";
+            this.btnImposto.Size = new System.Drawing.Size(212, 52);
+            this.btnImposto.TabIndex = 24;
+            this.btnImposto.Text = "Executar exemplo imposto";
+            this.btnImposto.UseVisualStyleBackColor = true;
+            this.btnImposto.Click += new System.EventHandler(this.BtnImposto_Click);
             // 
             // btnDiagrama
             // 
@@ -198,6 +202,19 @@
             this.btnDiagrama.TabIndex = 34;
             this.btnDiagrama.Text = "Diagrama";
             this.btnDiagrama.UseVisualStyleBackColor = true;
+            this.btnDiagrama.Click += new System.EventHandler(this.BtnDiagrama_Click);
+            // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelatorio.Location = new System.Drawing.Point(369, 205);
+            this.btnRelatorio.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(212, 52);
+            this.btnRelatorio.TabIndex = 35;
+            this.btnRelatorio.Text = "Executar exemplo relatório";
+            this.btnRelatorio.UseVisualStyleBackColor = true;
+            this.btnRelatorio.Click += new System.EventHandler(this.BtnRelatorio_Click);
             // 
             // FormTemplateMethod
             // 
@@ -213,10 +230,11 @@
             this.Controls.Add(this.txtAplicacao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnNotaFiscal);
+            this.Controls.Add(this.btnImposto);
             this.Controls.Add(this.btnDiagrama);
+            this.Controls.Add(this.btnRelatorio);
             this.Name = "FormTemplateMethod";
-            this.Text = "FormTemplateMethod";
+            this.Text = "Template Method";
             this.panelDiagrama.ResumeLayout(false);
             this.panelDiagrama.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -239,7 +257,9 @@
         private System.Windows.Forms.TextBox txtAplicacao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnNotaFiscal;
+        private System.Windows.Forms.Button btnImposto;
         private System.Windows.Forms.Button btnDiagrama;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnRelatorio;
     }
 }

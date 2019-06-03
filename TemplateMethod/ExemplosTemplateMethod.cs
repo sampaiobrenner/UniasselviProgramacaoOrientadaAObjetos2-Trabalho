@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TemplateMethod.Imposto;
 using TemplateMethod.Relatorio;
 
@@ -16,16 +15,16 @@ namespace TemplateMethod
             orcamento.AdicionaItem(new Item("Liquid Paper", 20));
             orcamento.AdicionaItem(new Item("Xbox", 420));
 
-            Imposto.Imposto ICPP = new ICPP();
-            Imposto.Imposto IKCV = new IKCV();
-            Imposto.Imposto IHIT = new IHIT();
+            IImposto icpp = new ICPP();
+            IImposto ikcv = new IKCV();
+            IImposto ihit = new IHIT();
 
             var calculador = new CalculadorDeImposto();
 
-            calculador.RealizaCalculo(orcamento, IHIT);
+            calculador.RealizaCalculo(orcamento, ihit);
 
             orcamento.AdicionaItem(new Item("Caneta", 20));
-            calculador.RealizaCalculo(orcamento, IHIT);
+            calculador.RealizaCalculo(orcamento, ihit);
         }
 
         public static void Relatorio()
@@ -44,7 +43,6 @@ namespace TemplateMethod
             TemplateRelatorio relatorio2 = new RelatorioComplexo();
 
             relatorio1.Imprime(contas);
-            Console.WriteLine("---------------------------------------------");
             relatorio2.Imprime(contas);
         }
     }

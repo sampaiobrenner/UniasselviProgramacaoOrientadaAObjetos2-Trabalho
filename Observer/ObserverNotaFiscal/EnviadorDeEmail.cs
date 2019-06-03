@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Windows.Forms;
 
 namespace Observer.ObserverNotaFiscal
 {
@@ -6,7 +6,7 @@ namespace Observer.ObserverNotaFiscal
     {
         public void Executa(NotaFiscal nf)
         {
-            Console.WriteLine("Nota Fiscal enviada por e-mail");
+            MessageBox.Show("Nota Fiscal enviada por e-mail.");
         }
     }
 }

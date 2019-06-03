@@ -1,24 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace TemplateMethod.Relatorio
 {
     public class RelatorioSimples : TemplateRelatorio
     {
-        public override void Cabecalho()
+        protected override string Cabecalho()
         {
-            Console.WriteLine("Banco XYZ");
+            return new StringBuilder()
+                .Append($"Banco XYZ                             {Environment.NewLine}")
+                .Append($"----------------------------------    {Environment.NewLine}")
+                .ToString();
         }
 
-        public override void Corpo(IList<Conta> contas)
+        protected override string Corpo(IEnumerable<Conta> contas)
         {
-            foreach (var c in contas) Console.WriteLine(c.Titutar + " - " + c.Saldo);
+            var str = new StringBuilder();
+
+            foreach (var c in contas)
+                str.Append($"{c.Titutar} - {c.Saldo}            {Environment.NewLine}");
+
+            return str.ToString();
         }
 
-        public override void Rodape()
+        protected override string Rodape()
         {
-            Console.WriteLine("(21) 1234-5678");
-            ;
+            return new StringBuilder()
+                .Append($"----------------------------------    {Environment.NewLine}")
+                .Append($"(21) 1234-5678                        {Environment.NewLine}")
+                .ToString();
         }
     }
 }
