@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace State.State_de_Conta
+namespace State.Conta
 {
     public class Conta
     {

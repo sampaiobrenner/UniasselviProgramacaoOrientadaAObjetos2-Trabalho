@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Decorator.banco
+namespace Decorator.Banco
 {
     public class FiltroSaldoMaior500K : Filtro
     {

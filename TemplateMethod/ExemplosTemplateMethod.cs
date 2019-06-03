@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using TemplateMethod.imposto;
+using TemplateMethod.Imposto;
 using TemplateMethod.Relatorio;
 
 namespace TemplateMethod
 {
-    internal class Program
+    public static class ExemplosTemplateMethod
     {
-        private static void Imposto()
+        public static void Imposto()
         {
             var orcamento = new Orcamento(0);
             orcamento.AdicionaItem(new Item("Caneta", 20));
@@ -16,9 +16,9 @@ namespace TemplateMethod
             orcamento.AdicionaItem(new Item("Liquid Paper", 20));
             orcamento.AdicionaItem(new Item("Xbox", 420));
 
-            Imposto ICPP = new ICPP();
-            Imposto IKCV = new IKCV();
-            Imposto IHIT = new IHIT();
+            Imposto.Imposto ICPP = new ICPP();
+            Imposto.Imposto IKCV = new IKCV();
+            Imposto.Imposto IHIT = new IHIT();
 
             var calculador = new CalculadorDeImposto();
 
@@ -26,14 +26,10 @@ namespace TemplateMethod
 
             orcamento.AdicionaItem(new Item("Caneta", 20));
             calculador.RealizaCalculo(orcamento, IHIT);
-
-            Console.ReadKey();
         }
 
-        private static void Main(string[] args)
+        public static void Relatorio()
         {
-            // Imposto();
-
             IList<Conta> contas = new List<Conta>();
 
             var conta1 = new Conta("Rodrigo", 1234, 789456123, 500);
@@ -50,7 +46,6 @@ namespace TemplateMethod
             relatorio1.Imprime(contas);
             Console.WriteLine("---------------------------------------------");
             relatorio2.Imprime(contas);
-            Console.ReadKey();
         }
     }
 }

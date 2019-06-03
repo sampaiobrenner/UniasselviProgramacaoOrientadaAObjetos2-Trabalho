@@ -54,7 +54,7 @@
     <Compile Include="ObserverNotaFiscal\NotaFiscal.cs" />
     <Compile Include="ObserverNotaFiscal\NotaFiscalBuilder.cs" />
     <Compile Include="ObserverNotaFiscal\NotaFiscalDao.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="ExemplosObserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

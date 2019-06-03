@@ -1,21 +1,12 @@
 ﻿using System;
-using State.State_de_Conta;
-using State.State_de_Orcamento;
 
 namespace State
 {
-    internal class Program
+    public static class ExemplosState
     {
-        private static void Main(string[] args)
+        public static void StateDeConta()
         {
-            // StateDeOrcamento();
-
-            StateDeConta();
-        }
-
-        private static void StateDeConta()
-        {
-            var conta = new Conta(500);
+            var conta = new Conta.Conta(500);
 
             Console.WriteLine(conta.Saldo);
             conta.Saca(600);
@@ -24,13 +15,11 @@ namespace State
             Console.WriteLine(conta.Saldo);
             conta.Deposita(100);
             Console.WriteLine(conta.Saldo);
-
-            Console.ReadKey();
         }
 
-        private static void StateDeOrcamento()
+        public static void StateDeOrcamento()
         {
-            var reforma = new Orcamento(500);
+            var reforma = new Orcamento.Orcamento(500);
 
             Console.WriteLine(reforma.Valor);
             reforma.AplicaDescontoExtra();
@@ -42,8 +31,6 @@ namespace State
             Console.WriteLine(reforma.Valor);
 
             reforma.Finaliza();
-
-            Console.ReadKey();
         }
     }
 }

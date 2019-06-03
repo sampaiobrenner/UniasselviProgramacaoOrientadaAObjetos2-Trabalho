@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TemplateMethod.imposto
+namespace TemplateMethod.Imposto
 {
     public class Orcamento
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace State.State_de_Orcamento
+namespace State.Orcamento
 {
     public class Orcamento
     {

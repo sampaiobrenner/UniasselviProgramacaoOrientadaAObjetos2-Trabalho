@@ -1,8 +1,10 @@
-﻿namespace Decorator.imposto
+﻿using Decorator.imposto;
+
+namespace Decorator.Imposto
 {
-    public class ISS : Imposto
+    public class ISS : imposto.Imposto
     {
-        public ISS(Imposto outroImposto) : base(outroImposto)
+        public ISS(imposto.Imposto outroImposto) : base(outroImposto)
         {
         }
 

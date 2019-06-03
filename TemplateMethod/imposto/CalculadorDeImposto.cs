@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TemplateMethod.imposto
+namespace TemplateMethod.Imposto
 {
     internal class CalculadorDeImposto
     {

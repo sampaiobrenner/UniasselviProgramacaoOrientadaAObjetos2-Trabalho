@@ -46,19 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="State de Conta\Conta.cs" />
-    <Compile Include="State de Conta\IEstadoDeConta.cs" />
-    <Compile Include="State de Conta\Negativo.cs" />
-    <Compile Include="State de Conta\Positivo.cs" />
-    <Compile Include="State de Orcamento\Aprovado.cs" />
-    <Compile Include="State de Orcamento\EmAprovacao.cs" />
-    <Compile Include="State de Orcamento\IEstadoDoOrcamento.cs" />
-    <Compile Include="State de Orcamento\Finalizado.cs" />
-    <Compile Include="State de Orcamento\Item.cs" />
-    <Compile Include="State de Orcamento\Orcamento.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Conta\Conta.cs" />
+    <Compile Include="Conta\IEstadoDeConta.cs" />
+    <Compile Include="Conta\Negativo.cs" />
+    <Compile Include="Conta\Positivo.cs" />
+    <Compile Include="Orcamento\Aprovado.cs" />
+    <Compile Include="Orcamento\EmAprovacao.cs" />
+    <Compile Include="Orcamento\IEstadoDoOrcamento.cs" />
+    <Compile Include="Orcamento\Finalizado.cs" />
+    <Compile Include="Orcamento\Item.cs" />
+    <Compile Include="Orcamento\Orcamento.cs" />
+    <Compile Include="ExemplosState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="State de Orcamento\Reprovado.cs" />
+    <Compile Include="Orcamento\Reprovado.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

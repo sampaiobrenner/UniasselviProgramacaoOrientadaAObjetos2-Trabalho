@@ -1,17 +1,11 @@
-﻿using System;
+﻿using Observer.ObserverNotaFiscal;
 using System.Collections.Generic;
-using Observer.ObserverNotaFiscal;
 
 namespace Observer
 {
-    internal class Program
+    public class ExemplosObserver
     {
-        private static void Main(string[] args)
-        {
-            Observer();
-        }
-
-        private static void Observer()
+        public static void Observer()
         {
             var itemBuilder = new ItemDaNotaBuilder();
             itemBuilder
@@ -27,11 +21,7 @@ namespace Observer
                 .ComValor(200);
             var item3 = itemBuilder.Constroi();
 
-            var acoes = new List<IAcoesDaNotaFiscal>();
-
-            acoes.Add(new EnviadorDeEmail());
-            acoes.Add(new NotaFiscalDao());
-            acoes.Add(new Multiplicador(2));
+            var acoes = new List<IAcoesDaNotaFiscal> { new EnviadorDeEmail(), new NotaFiscalDao(), new Multiplicador(2) };
 
             var builder = new NotaFiscalBuilder(acoes);
             builder
@@ -48,8 +38,6 @@ namespace Observer
             var nota = builder.Constroi();
 
             nota.Imprime();
-
-            Console.ReadKey();
         }
     }
 }
