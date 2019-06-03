@@ -40,8 +40,9 @@
             this.txtAplicacao = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnNotaFiscal = new System.Windows.Forms.Button();
+            this.btnConta = new System.Windows.Forms.Button();
             this.btnDiagrama = new System.Windows.Forms.Button();
+            this.btnOrcamento = new System.Windows.Forms.Button();
             this.panelDiagrama.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +70,7 @@
             this.linkFecharDiagrama.TabIndex = 4;
             this.linkFecharDiagrama.TabStop = true;
             this.linkFecharDiagrama.Text = "Fechar";
+            this.linkFecharDiagrama.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkFecharDiagrama_LinkClicked);
             // 
             // label5
             // 
@@ -177,16 +179,17 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Categoria:";
             // 
-            // btnNotaFiscal
+            // btnConta
             // 
-            this.btnNotaFiscal.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotaFiscal.Location = new System.Drawing.Point(36, 205);
-            this.btnNotaFiscal.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNotaFiscal.Name = "btnNotaFiscal";
-            this.btnNotaFiscal.Size = new System.Drawing.Size(212, 52);
-            this.btnNotaFiscal.TabIndex = 24;
-            this.btnNotaFiscal.Text = "Executar exemplo nota fiscal";
-            this.btnNotaFiscal.UseVisualStyleBackColor = true;
+            this.btnConta.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConta.Location = new System.Drawing.Point(36, 205);
+            this.btnConta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConta.Name = "btnConta";
+            this.btnConta.Size = new System.Drawing.Size(212, 52);
+            this.btnConta.TabIndex = 24;
+            this.btnConta.Text = "Executar exemplo conta";
+            this.btnConta.UseVisualStyleBackColor = true;
+            this.btnConta.Click += new System.EventHandler(this.BtnConta_Click);
             // 
             // btnDiagrama
             // 
@@ -198,6 +201,19 @@
             this.btnDiagrama.TabIndex = 34;
             this.btnDiagrama.Text = "Diagrama";
             this.btnDiagrama.UseVisualStyleBackColor = true;
+            this.btnDiagrama.Click += new System.EventHandler(this.BtnDiagrama_Click);
+            // 
+            // btnOrcamento
+            // 
+            this.btnOrcamento.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrcamento.Location = new System.Drawing.Point(369, 205);
+            this.btnOrcamento.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOrcamento.Name = "btnOrcamento";
+            this.btnOrcamento.Size = new System.Drawing.Size(212, 52);
+            this.btnOrcamento.TabIndex = 35;
+            this.btnOrcamento.Text = "Executar exemplo orçamento";
+            this.btnOrcamento.UseVisualStyleBackColor = true;
+            this.btnOrcamento.Click += new System.EventHandler(this.BtnOrcamento_Click);
             // 
             // FormState
             // 
@@ -213,8 +229,9 @@
             this.Controls.Add(this.txtAplicacao);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnNotaFiscal);
+            this.Controls.Add(this.btnConta);
             this.Controls.Add(this.btnDiagrama);
+            this.Controls.Add(this.btnOrcamento);
             this.Name = "FormState";
             this.Text = "FormState";
             this.panelDiagrama.ResumeLayout(false);
@@ -239,7 +256,8 @@
         private System.Windows.Forms.TextBox txtAplicacao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnNotaFiscal;
+        private System.Windows.Forms.Button btnConta;
         private System.Windows.Forms.Button btnDiagrama;
+        private System.Windows.Forms.Button btnOrcamento;
     }
 }

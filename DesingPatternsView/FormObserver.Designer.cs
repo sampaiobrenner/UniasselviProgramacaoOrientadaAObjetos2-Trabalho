@@ -69,6 +69,7 @@
             this.linkFecharDiagrama.TabIndex = 4;
             this.linkFecharDiagrama.TabStop = true;
             this.linkFecharDiagrama.Text = "Fechar";
+            this.linkFecharDiagrama.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkFecharDiagrama_LinkClicked);
             // 
             // label5
             // 
@@ -187,6 +188,7 @@
             this.btnNotaFiscal.TabIndex = 24;
             this.btnNotaFiscal.Text = "Executar exemplo nota fiscal";
             this.btnNotaFiscal.UseVisualStyleBackColor = true;
+            this.btnNotaFiscal.Click += new System.EventHandler(this.BtnNotaFiscal_Click);
             // 
             // btnDiagrama
             // 
@@ -198,6 +200,7 @@
             this.btnDiagrama.TabIndex = 34;
             this.btnDiagrama.Text = "Diagrama";
             this.btnDiagrama.UseVisualStyleBackColor = true;
+            this.btnDiagrama.Click += new System.EventHandler(this.BtnDiagrama_Click);
             // 
             // FormObserver
             // 
