@@ -33,12 +33,15 @@ namespace DesingPatternsView
         private void PrencherCampos()
         {
             txtParticipantes.Text =
-                @" ";
+                @"Abstract class, Concrete class... ";
 
             txtExemploPratico.Text =
                 @"";
             txtAplicacao.Text =
-                @"";
+                @"Um Template Method auxilia na definição de um algoritmo com partes do mesmo definidos por métodos abstratos. " +
+                @" As subclasses devem se responsabilizar por estas partes abstratas, deste algoritmo, que serão implementadas, " +
+                @" possivelmente de várias formas, ou seja, cada subclasse irá implementar à sua necessidade e oferecer um comportamento " +
+                @"concreto construindo todo o algoritmo.";
 
             txtCategoria.Text =
                 @"Comportamental";

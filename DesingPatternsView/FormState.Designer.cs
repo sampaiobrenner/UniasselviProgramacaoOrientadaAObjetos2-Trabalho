@@ -85,7 +85,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DesingPatternsView.Properties.Resources.estrutura_builder;
+            this.pictureBox1.Image = global::DesingPatternsView.Properties.Resources.estrutura_state;
             this.pictureBox1.Location = new System.Drawing.Point(48, 42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(458, 231);
@@ -154,6 +154,7 @@
             this.txtAplicacao.Multiline = true;
             this.txtAplicacao.Name = "txtAplicacao";
             this.txtAplicacao.ReadOnly = true;
+            this.txtAplicacao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAplicacao.Size = new System.Drawing.Size(545, 72);
             this.txtAplicacao.TabIndex = 27;
             // 
@@ -233,7 +234,7 @@
             this.Controls.Add(this.btnDiagrama);
             this.Controls.Add(this.btnOrcamento);
             this.Name = "FormState";
-            this.Text = "FormState";
+            this.Text = "State";
             this.panelDiagrama.ResumeLayout(false);
             this.panelDiagrama.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

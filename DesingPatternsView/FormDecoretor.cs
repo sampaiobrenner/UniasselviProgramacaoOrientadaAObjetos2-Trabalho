@@ -50,7 +50,7 @@ namespace DesingPatternsView
             txtExemploPratico.Text =
                 @"Um exemplo simples e prático da aplicação do Decorator seria colocar acessórios em uma arma, como miras e silenciadores. " +
                 @"Um modo de se contornar esse problema seria criar uma interface e criar armas que implementam essa interface. " +
-                @"(Arma sem acessórios, arma com silenciador, arma com mira, arma com mira e silenciador). Outra solução seria utilizar o Design Pattern Decorator. ";
+                @"Outra solução seria utilizar o Design Pattern Decorator. ";
 
             txtAplicacao.Text =
                 @"Decorator é um padrão de projeto de software que permite adicionar um comportamento a um objeto já existente " +
