@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Observer
 {
-    public class ExemplosObserver
+    public static class ExemplosObserver
     {
         public static void Observer()
         {

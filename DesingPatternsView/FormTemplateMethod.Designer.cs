@@ -31,7 +31,6 @@
             this.panelDiagrama = new System.Windows.Forms.Panel();
             this.linkFecharDiagrama = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtExemploPratico = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtParticipantes = new System.Windows.Forms.TextBox();
@@ -44,6 +43,7 @@
             this.btnDiagrama = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnRelatorio = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelDiagrama.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -83,16 +83,6 @@
             this.label5.Size = new System.Drawing.Size(75, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "Diagrama";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesingPatternsView.Properties.Resources.estrutura_builder;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(458, 231);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // txtExemploPratico
             // 
@@ -155,6 +145,7 @@
             this.txtAplicacao.Multiline = true;
             this.txtAplicacao.Name = "txtAplicacao";
             this.txtAplicacao.ReadOnly = true;
+            this.txtAplicacao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAplicacao.Size = new System.Drawing.Size(545, 72);
             this.txtAplicacao.TabIndex = 27;
             // 
@@ -215,6 +206,16 @@
             this.btnRelatorio.Text = "Executar exemplo relatório";
             this.btnRelatorio.UseVisualStyleBackColor = true;
             this.btnRelatorio.Click += new System.EventHandler(this.BtnRelatorio_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesingPatternsView.Properties.Resources.estrutura_template_method;
+            this.pictureBox1.Location = new System.Drawing.Point(75, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(404, 231);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FormTemplateMethod
             // 

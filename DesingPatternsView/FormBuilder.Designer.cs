@@ -143,6 +143,7 @@
             this.txtAplicacao.Multiline = true;
             this.txtAplicacao.Name = "txtAplicacao";
             this.txtAplicacao.ReadOnly = true;
+            this.txtAplicacao.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAplicacao.Size = new System.Drawing.Size(545, 72);
             this.txtAplicacao.TabIndex = 16;
             // 
@@ -219,7 +220,7 @@
             this.Controls.Add(this.btnNotaFiscal);
             this.Controls.Add(this.btnDiagrama);
             this.Name = "FormBuilder";
-            this.Text = "FormBuilder";
+            this.Text = "Builder";
             this.panelDiagrama.ResumeLayout(false);
             this.panelDiagrama.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

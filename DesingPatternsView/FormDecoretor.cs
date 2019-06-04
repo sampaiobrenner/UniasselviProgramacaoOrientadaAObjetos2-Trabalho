@@ -45,14 +45,19 @@ namespace DesingPatternsView
         private void PrencherCampos()
         {
             txtParticipantes.Text =
-                @"Context, Strategy e ConcreteStrategy";
+                @"Client, Component, Concrete component, base decorator e concrete decorator.";
 
-            txtExemploPratico.Text = "";
+            txtExemploPratico.Text =
+                @"Um exemplo simples e prático da aplicação do Decorator seria colocar acessórios em uma arma, como miras e silenciadores. " +
+                @"Um modo de se contornar esse problema seria criar uma interface e criar armas que implementam essa interface. " +
+                @"Outra solução seria utilizar o Design Pattern Decorator. ";
 
-            txtAplicacao.Text = "";
+            txtAplicacao.Text =
+                @"Decorator é um padrão de projeto de software que permite adicionar um comportamento a um objeto já existente " +
+                @"em tempo de execução, ou seja, agrega dinamicamente responsabilidades adicionais a um objeto. ";
 
             txtCategoria.Text =
-                @"Comportamental";
+                @"Estrutural";
         }
     }
 }

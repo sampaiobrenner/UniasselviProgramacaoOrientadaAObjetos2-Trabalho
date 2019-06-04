@@ -197,5 +197,11 @@
   <ItemGroup>
     <None Include="Resources\estrutura_decoretor_2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrutura_template_method.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estrutura_state.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

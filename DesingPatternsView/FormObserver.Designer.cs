@@ -31,7 +31,6 @@
             this.panelDiagrama = new System.Windows.Forms.Panel();
             this.linkFecharDiagrama = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtExemploPratico = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtParticipantes = new System.Windows.Forms.TextBox();
@@ -42,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnNotaFiscal = new System.Windows.Forms.Button();
             this.btnDiagrama = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelDiagrama.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +69,7 @@
             this.linkFecharDiagrama.TabIndex = 4;
             this.linkFecharDiagrama.TabStop = true;
             this.linkFecharDiagrama.Text = "Fechar";
+            this.linkFecharDiagrama.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkFecharDiagrama_LinkClicked);
             // 
             // label5
             // 
@@ -80,16 +81,6 @@
             this.label5.Size = new System.Drawing.Size(75, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "Diagrama";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DesingPatternsView.Properties.Resources.estrutura_builder;
-            this.pictureBox1.Location = new System.Drawing.Point(48, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(458, 231);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // txtExemploPratico
             // 
@@ -187,6 +178,7 @@
             this.btnNotaFiscal.TabIndex = 24;
             this.btnNotaFiscal.Text = "Executar exemplo nota fiscal";
             this.btnNotaFiscal.UseVisualStyleBackColor = true;
+            this.btnNotaFiscal.Click += new System.EventHandler(this.BtnNotaFiscal_Click);
             // 
             // btnDiagrama
             // 
@@ -198,6 +190,17 @@
             this.btnDiagrama.TabIndex = 34;
             this.btnDiagrama.Text = "Diagrama";
             this.btnDiagrama.UseVisualStyleBackColor = true;
+            this.btnDiagrama.Click += new System.EventHandler(this.BtnDiagrama_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DesingPatternsView.Properties.Resources.estrutura_builder;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(458, 231);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FormObserver
             // 
@@ -216,7 +219,7 @@
             this.Controls.Add(this.btnNotaFiscal);
             this.Controls.Add(this.btnDiagrama);
             this.Name = "FormObserver";
-            this.Text = "FormObserver";
+            this.Text = "Observer";
             this.panelDiagrama.ResumeLayout(false);
             this.panelDiagrama.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
