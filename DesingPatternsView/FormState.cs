@@ -7,6 +7,7 @@ namespace DesingPatternsView
         public FormState()
         {
             InitializeComponent();
+            PrencherCampos();
         }
 
         private void BtnConta_Click(object sender, System.EventArgs e)
@@ -27,6 +28,20 @@ namespace DesingPatternsView
         private void LinkFecharDiagrama_LinkClicked(object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)
         {
             panelDiagrama.Visible = false;
+        }
+
+        private void PrencherCampos()
+        {
+            txtParticipantes.Text =
+                @" ";
+
+            txtExemploPratico.Text =
+                @"";
+            txtAplicacao.Text =
+                @"";
+
+            txtCategoria.Text =
+                @"Comportamental";
         }
     }
 }

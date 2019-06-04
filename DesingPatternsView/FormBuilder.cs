@@ -44,7 +44,7 @@ namespace DesingPatternsView
                 @"tratar uma solicitação";
 
             txtCategoria.Text =
-                @"Comportamental";
+                @"Criação";
         }
     }
 }
